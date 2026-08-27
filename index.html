@@ -1,0 +1,5672 @@
+<!-- ============================================================
+     आर्यन चिराम - PREMIUM ABOUT ME PAGE
+     Blogger / Blogspot Compatible
+     HTML + CSS + JavaScript
+=============================================================== -->
+
+<style>
+
+/* ================================
+   WRITING SECTION
+================================ */
+
+.writing-section{
+    width:100%;
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+    box-sizing:border-box;
+
+    font-family:
+    Arial,
+    "Noto Sans Devanagari",
+    sans-serif;
+}
+
+
+/* ================================
+   ARTICLE CARD
+================================ */
+
+.article-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:45px;
+
+    margin-bottom:45px;
+
+    padding:20px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,0.07);
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+/* Hover */
+
+.article-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.12);
+}
+
+
+/* ================================
+   ZIG ZAG
+================================ */
+
+.article-card.reverse{
+
+    flex-direction:row-reverse;
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.article-image{
+
+    width:43%;
+
+    min-width:43%;
+
+    overflow:hidden;
+
+    border-radius:17px;
+
+    background:#f1f3f5;
+}
+
+
+.article-image img{
+
+    display:block;
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:
+    transform .5s ease;
+}
+
+
+.article-card:hover
+.article-image img{
+
+    transform:scale(1.06);
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.article-content{
+
+    flex:1;
+
+    min-width:0;
+}
+
+
+.article-date{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#7b8190;
+
+    font-size:13px;
+}
+
+
+.article-content h2{
+
+    margin:0 0 13px;
+
+    color:#172033;
+
+    font-size:25px;
+
+    line-height:1.45;
+}
+
+
+.article-content p{
+
+    margin:0 0 20px;
+
+    color:#667085;
+
+    font-size:15px;
+
+    line-height:1.8;
+}
+
+
+/* ================================
+   READ BUTTON
+================================ */
+
+.read-more{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:11px 18px;
+
+    background:#4f46e5;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    border-radius:9px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+
+.read-more:hover{
+
+    background:#3730a3;
+
+    transform:translateX(5px);
+}
+
+
+.read-more span{
+
+    font-size:19px;
+}
+
+
+/* ================================
+   LOADING
+================================ */
+
+.loading{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    color:#667085;
+
+    font-size:16px;
+}
+
+
+/* ================================
+   ERROR
+================================ */
+
+.error-message{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#b42318;
+
+    background:#fff5f5;
+
+    border-radius:12px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .writing-section{
+
+        padding:12px;
+    }
+
+
+    .article-card,
+    .article-card.reverse{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:15px;
+
+        margin-bottom:30px;
+    }
+
+
+    .article-image{
+
+        width:100%;
+
+        min-width:100%;
+    }
+
+
+    .article-image img{
+
+        height:210px;
+    }
+
+
+    .article-content{
+
+        width:100%;
+    }
+
+
+    .article-content h2{
+
+        font-size:21px;
+    }
+
+
+    .article-content p{
+
+        font-size:14px;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media(max-width:480px){
+
+    .article-image img{
+
+        height:185px;
+    }
+
+
+    .article-content h2{
+
+        font-size:19px;
+    }
+
+}
+	
+===============================================
+  /* ===== सम्मान (Award Card Style) ===== */
+===============================================
+  .samman-section {
+    max-width: 900px;
+    margin: 50px auto 40px;
+    padding: 0 20px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+
+  .samman-title {
+    text-align: center;
+    color: #5c3a21;
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .samman-sub {
+    text-align: center;
+    color: #7a5c3e;
+    font-size: 0.92rem;
+    margin-bottom: 28px;
+  }
+
+  .samman-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  .samman-card {
+    background: linear-gradient(145deg, #fffdf8, #f8f0e3);
+    border: 1px solid #e0c9a0;
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(92, 58, 33, 0.07);
+    transition: all 0.28s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .samman-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c9a227, #e8c547, #c9a227); /* गोल्ड लाइन */
+  }
+
+  .samman-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(92, 58, 33, 0.13);
+  }
+
+  .samman-icon {
+    width: 52px;
+    height: 52px;
+    background: #f5e6d3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 14px;
+    color: #5c3a21;
+    border: 2px solid #e0c9a0;
+  }
+
+  .samman-card h4 {
+    margin: 0 0 6px;
+    font-size: 1.08rem;
+    color: #4a2c0a;
+    font-weight: 650;
+  }
+
+  .samman-card p {
+    margin: 0 0 16px;
+    font-size: 0.85rem;
+    color: #8b6b4a;
+  }
+
+  .samman-btn {
+    display: inline-block;
+    background: #5c3a21;
+    color: #fffdf8;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .samman-btn:hover {
+    background: #3e2614;
+    transform: scale(1.04);
+  }
+
+  /* फोटो गैलरी (सम्मान के नीचे) */
+  .samman-gallery-title {
+    text-align: center;
+    color: #5c3a21;
+    font-size: 1.2rem;
+    font-weight: 650;
+    margin: 40px 0 18px;
+  }
+
+  .samman-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .gallery-card {
+    background: #fffdf8;
+    border: 1px solid #e0c9a0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(92, 58, 33, 0.06);
+    transition: all 0.25s;
+  }
+
+  .gallery-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(92, 58, 33, 0.12);
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    background: #f5e6d3;
+  }
+
+  .gallery-caption {
+    padding: 11px 12px;
+    text-align: center;
+  }
+
+  .gallery-caption h5 {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #4a2c0a;
+    font-weight: 600;
+  }
+
+  .gallery-caption p {
+    margin: 3px 0 0;
+    font-size: 0.78rem;
+    color: #8b6b4a;
+  }
+
+  @media (max-width: 560px) {
+    .samman-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+	
+========================================
+<!-- ===== योग्यता / मार्कशीट सेक्शन ===== -->
+========================================
+  .yogyata-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+
+  .yogyata-title {
+    text-align: center;
+    color: #5c3a21;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .yogyata-sub {
+    text-align: center;
+    color: #7a5c3e;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .yogyata-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .yogyata-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fffdf8;
+    border: 1px solid #e8d9c0;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 3px 10px rgba(92, 58, 33, 0.06);
+    transition: all 0.25s ease;
+  }
+
+  .yogyata-item:hover {
+    border-color: #c9a87c;
+    box-shadow: 0 5px 16px rgba(92, 58, 33, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .yogyata-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .yogyata-icon {
+    width: 42px;
+    height: 42px;
+    background: #f5e6d3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #5c3a21;
+  }
+
+  .yogyata-info h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #4a2c0a;
+    font-weight: 650;
+  }
+
+  .yogyata-info p {
+    margin: 3px 0 0;
+    font-size: 0.85rem;
+    color: #8b6b4a;
+  }
+
+  .yogyata-btn {
+    background: #5c3a21;
+    color: #fffdf8;
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .yogyata-btn:hover {
+    background: #3e2614;
+    transform: scale(1.03);
+  }
+
+  /* Mobile */
+  @media (max-width: 560px) {
+    .yogyata-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .yogyata-btn {
+      align-self: flex-end;
+    }
+  }
+
+	
+=====================================
+/* CSS Demo & Download Buttons */
+=====================================
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #e6f1b7de;
+      color: #1a1a2e;
+      line-height: 1.5;
+      padding: 20px 15px;
+    }
+
+    .samajik-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(43, 0, 254, 0.08);
+      overflow: hidden;
+    }
+
+    .section-header {
+      background: linear-gradient(135deg, #2b00fe, #5b2cff);
+      color: white;
+      text-align: center;
+      padding: 28px 20px;
+      position: relative;
+    }
+
+    .section-header h2 {
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .section-header p {
+      margin-top: 6px;
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+
+    .content-wrap {
+      padding: 28px 22px 35px;
+    }
+
+    /* Category Tabs */
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+      justify-content: center;
+    }
+
+    .tab-btn {
+      padding: 9px 18px;
+      border: 2px solid #2b00fe;
+      background: transparent;
+      color: #2b00fe;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .tab-btn:hover,
+    .tab-btn.active {
+      background: #2b00fe;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(43, 0, 254, 0.3);
+    }
+
+    /* Grid of Cards/Buttons */
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 18px;
+      background: #f8f9ff;
+      border: 1px solid #e8eaf6;
+      border-radius: 14px;
+      text-decoration: none;
+      color: #1a1a2e;
+      transition: all 0.28s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .link-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: #2b00fe;
+      transform: scaleY(0);
+      transition: transform 0.25s ease;
+    }
+
+    .link-card:hover {
+      background: #fff;
+      border-color: #2b00fe;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(43, 0, 254, 0.12);
+    }
+
+    .link-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      background: linear-gradient(135deg, #2b00fe, #7b5cff);
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .card-text {
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 650;
+      color: #1a1a2e;
+      margin-bottom: 2px;
+    }
+
+    .card-sub {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .link-card.disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .link-card.disabled:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Empty state */
+    .empty-msg {
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: 1.05rem;
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .section-header h2 {
+        font-size: 1.5rem;
+      }
+      .links-grid {
+        grid-template-columns: 1fr;
+      }
+      .content-wrap {
+        padding: 20px 14px 28px;
+      }
+    }
+/* ============================================================
+   ROOT
+============================================================ */
+
+#halba-about{
+  --maroon:#762719;
+  --maroon-dark:#46150f;
+  --red:#a83d23;
+  --orange:#d97728;
+  --gold:#d69b38;
+  --cream:#fff8e9;
+  --paper:#fffdf7;
+  --brown:#3d241b;
+  --text:#4c3930;
+  --muted:#806c61;
+  --border:#e7c991;
+  --shadow:0 15px 45px rgba(83,45,25,.12);
+
+  font-family:
+    "Noto Sans Devanagari",
+    "Nirmala UI",
+    "Mangal",
+    Arial,
+    sans-serif;
+
+  color:var(--text);
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(214,155,56,.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 35%,
+      rgba(168,61,35,.08),
+      transparent 28%
+    ),
+    var(--cream);
+
+  line-height:1.75;
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+#halba-about *,
+#halba-about *::before,
+#halba-about *::after{
+  box-sizing:border-box;
+}
+
+#halba-about img{
+  max-width:100%;
+}
+
+#halba-about a{
+  text-decoration:none;
+}
+
+
+/* ============================================================
+   SUBTLE MA DANTESHWARI WATERMARK
+============================================================ */
+
+.ha-watermark{
+  position:absolute;
+  pointer-events:none;
+  z-index:0;
+  opacity:.055;
+  color:var(--maroon);
+  font-size:310px;
+  line-height:1;
+  user-select:none;
+}
+
+.ha-watermark.left{
+  left:-100px;
+  top:170px;
+  transform:rotate(-8deg);
+}
+
+.ha-watermark.right{
+  right:-100px;
+  top:720px;
+  transform:rotate(8deg);
+}
+
+.ha-watermark.bottom{
+  left:50%;
+  transform:translateX(-50%);
+  bottom:250px;
+  font-size:260px;
+}
+
+
+/* ============================================================
+   ADIVASI PATTERN
+============================================================ */
+
+.ha-pattern{
+  height:26px;
+
+  background-color:var(--maroon);
+
+  background-image:
+    linear-gradient(
+      135deg,
+      transparent 45%,
+      #ffd37b 46%,
+      #ffd37b 54%,
+      transparent 55%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 45%,
+      #ffd37b 46%,
+      #ffd37b 54%,
+      transparent 55%
+    );
+
+  background-size:22px 22px;
+  border-top:3px solid var(--gold);
+  border-bottom:3px solid var(--gold);
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.ha-container{
+  width:mix(1180px,98%);
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.ha-hero{
+  position:relative;
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,250,235,.98),
+      rgba(255,243,213,.94)
+    );
+}
+
+.ha-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(214,155,56,.14),
+      transparent 30%
+    );
+}
+
+.ha-hero-grid{
+ 
+  grid-template-columns:390px 1fr;
+  gap:70px;
+  align-items:start;
+}
+
+
+/* ============================================================
+   PROFILE
+============================================================ */
+
+.ha-profile{
+  text-align:center;
+}
+
+.ha-profile-frame{
+  position:relative;
+  width:270px;
+  height:270px;
+  margin:0 auto 30px;
+}
+
+.ha-profile-frame::before{
+  content:"";
+  position:absolute;
+  inset:-14px;
+
+  border:3px solid var(--gold);
+  border-radius:50%;
+
+  border-left-color:transparent;
+  transform:rotate(-20deg);
+
+  animation:haRotate 18s linear infinite;
+}
+
+.ha-profile-frame::after{
+  content:"";
+  position:absolute;
+  inset:-26px;
+
+  border:1px dashed rgba(118,39,25,.35);
+  border-radius:50%;
+}
+
+.ha-profile-photo{
+  width:270px;
+  height:270px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  border:9px solid #fff;
+
+  box-shadow:
+    0 20px 50px rgba(70,35,20,.25);
+}
+
+.ha-profile-name{
+  font-size:42px;
+  font-weight:900;
+  color:var(--maroon-dark);
+  margin:0 0 5px;
+  line-height:1.25;
+}
+
+.ha-profile-role{
+  font-size:15px;
+  color:var(--maroon);
+  font-weight:700;
+}
+
+
+/* ============================================================
+   HERO CONTENT
+============================================================ */
+
+.ha-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:7px 15px;
+
+  border-radius:50px;
+
+  color:var(--maroon);
+
+  background:#fff;
+  border:1px solid var(--border);
+
+  font-size:13px;
+  font-weight:800;
+
+  margin-bottom:18px;
+}
+
+.ha-hero-title{
+  font-size:49px;
+  line-height:1.25;
+
+  color:var(--brown);
+
+  margin:0 0 20px;
+
+  font-weight:900;
+}
+
+.ha-hero-title span{
+  color:var(--red);
+}
+
+.ha-hero-text{
+  max-width:700px;
+
+  font-size:17px;
+
+  color:var(--text);
+
+  margin:0 0 25px;
+}
+
+.ha-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-bottom:28px;
+}
+
+.ha-tag{
+  padding:7px 13px;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:50px;
+
+  color:var(--maroon);
+
+  font-size:13px;
+  font-weight:700;
+}
+
+.ha-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;  
+    justify-content: center;
+    align-content: space-around;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.ha-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+
+  padding:12px 20px;
+
+  border-radius:12px;
+
+  font-weight:800;
+
+  transition:.25s;
+}
+
+.ha-btn-main{
+  background:var(--maroon);
+  color:#fff !important;
+
+  box-shadow:
+    0 8px 20px rgba(118,39,25,.22);
+}
+
+.ha-btn-main:hover{
+  transform:translateY(-3px);
+}
+
+.ha-btn-outline{
+  border:1px solid var(--maroon);
+  color:var(--maroon) !important;
+  background:#fff;
+}
+
+
+/* ============================================================
+   SECTION
+============================================================ */
+
+.ha-section{
+  padding:85px 0;
+  position:relative;
+}
+
+.ha-section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.ha-kicker{
+  display:block;
+
+  color:var(--red);
+
+  font-size:13px;
+  font-weight:900;
+
+  letter-spacing:1px;
+
+  margin-bottom:6px;
+}
+
+.ha-section-title h2{
+  margin:0;
+
+  color:var(--brown);
+
+  font-size:35px;
+  line-height:1.3;
+}
+
+.ha-section-title p{
+  max-width:700px;
+  margin:10px auto 0;
+
+  color:var(--muted);
+
+  font-size:15px;
+}
+
+
+/* ============================================================
+   DECORATIVE HEADING
+============================================================ */
+
+.ha-heading-decoration{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+
+  margin-top:13px;
+}
+
+.ha-heading-decoration::before,
+.ha-heading-decoration::after{
+  content:"";
+
+  width:70px;
+  height:2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold)
+    );
+}
+
+.ha-heading-decoration::after{
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      transparent
+    );
+}
+
+.ha-heading-decoration span{
+  color:var(--gold);
+}
+
+
+/* ============================================================
+   ABOUT
+============================================================ */
+
+.ha-about-grid{
+  display:grid;
+
+  grid-template-columns:1.1fr .9fr;
+
+  gap:25px;
+}
+
+.ha-card{
+  background:rgba(255,255,255,.88);
+
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  padding:34px;
+
+  box-shadow:var(--shadow);
+}
+
+.ha-card h3{
+  margin:0 0 17px;
+
+  color:var(--maroon);
+
+  font-size:23px;
+}
+
+.ha-card p{
+  font-size:15px;
+  margin:0 0 14px;
+}
+
+.ha-quote{
+  margin-top:24px;
+
+  background:#fff2d4;
+
+  border-left:5px solid var(--gold);
+
+  padding:18px 20px;
+
+  border-radius:0 15px 15px 0;
+
+  color:#684a28;
+
+  font-weight:700;
+}
+
+
+/* ============================================================
+   PERSONAL INFO
+============================================================ */
+
+.ha-info-list{
+  display:grid;
+  gap:3px;
+}
+
+.ha-info{
+  display:grid;
+
+  grid-template-columns:145px 1fr;
+
+  padding:13px 5px;
+
+  border-bottom:1px dashed #e2cda5;
+}
+
+.ha-info:last-child{
+  border-bottom:0;
+}
+
+.ha-info-label{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.ha-info-value{
+  color:var(--brown);
+  font-weight:700;
+  font-size:14px;
+}
+
+
+/* ============================================================
+   MISSION
+============================================================ */
+
+.ha-mission{
+  background:
+    linear-gradient(
+      135deg,
+      #48170f,
+      #7d291c
+    );
+
+  color:#fff;
+}
+
+.ha-mission .ha-section-title h2,
+.ha-mission .ha-section-title p{
+  color:#fff;
+}
+
+.ha-mission-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:20px;
+}
+
+.ha-mission-card{
+  padding:30px;
+
+  border-radius:22px;
+
+  background:rgba(255,255,255,.07);
+
+  border:1px solid rgba(255,255,255,.14);
+
+  transition:.3s;
+}
+
+.ha-mission-card:hover{
+  transform:translateY(-7px);
+}
+
+.ha-mission-icon{
+  width:55px;
+  height:55px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:16px;
+
+  background:rgba(255,207,114,.14);
+
+  font-size:25px;
+
+  margin-bottom:17px;
+}
+
+.ha-mission-card h3{
+  color:#fff;
+  margin:0 0 8px;
+  font-size:20px;
+}
+
+.ha-mission-card p{
+  color:rgba(255,255,255,.76);
+  font-size:14px;
+  margin:0;
+}
+
+
+/* ============================================================
+   ACHIEVEMENTS
+============================================================ */
+
+.ha-achievement-grid{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:18px;
+}
+
+.ha-achievement{
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:20px;
+
+  padding:28px 20px;
+
+  text-align:center;
+
+  box-shadow:var(--shadow);
+
+  transition:.3s;
+}
+
+.ha-achievement:hover{
+  transform:translateY(-7px);
+}
+
+.ha-achievement-icon{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.ha-achievement h3{
+  margin:0 0 6px;
+
+  color:var(--maroon);
+
+  font-size:18px;
+}
+
+.ha-achievement p{
+  margin:0;
+
+  font-size:13px;
+
+  color:var(--muted);
+}
+
+
+/* ============================================================
+   TIMELINE
+============================================================ */
+
+.ha-timeline{
+  max-width:850px;
+  margin:auto;
+
+  position:relative;
+}
+
+.ha-timeline::before{
+  content:"";
+
+  position:absolute;
+
+  left:20px;
+  top:0;
+  bottom:0;
+
+  width:2px;
+
+  background:
+    linear-gradient(
+      var(--gold),
+      var(--maroon)
+    );
+}
+
+.ha-timeline-item{
+  position:relative;
+
+  padding-left:65px;
+
+  margin-bottom:30px;
+}
+
+.ha-timeline-dot{
+  position:absolute;
+
+  left:6px;
+  top:3px;
+
+  width:30px;
+  height:30px;
+
+  background:#fff;
+
+  border:6px solid var(--maroon);
+
+  border-radius:50%;
+}
+
+.ha-timeline-content{
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  padding:22px 25px;
+
+  box-shadow:0 10px 30px rgba(70,35,20,.07);
+}
+
+.ha-timeline-content h3{
+  margin:0 0 6px;
+
+  color:var(--brown);
+
+  font-size:19px;
+}
+
+.ha-timeline-content p{
+  margin:0;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+
+/* ============================================================
+   GALLERY
+============================================================ */
+
+.ha-gallery{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:15px;
+}
+
+.ha-gallery-item{
+  position:relative;
+
+  height:250px;
+
+  overflow:hidden;
+
+  border-radius:19px;
+
+  border:4px solid #fff;
+
+  box-shadow:
+    0 10px 30px rgba(70,35,20,.13);
+
+  cursor:pointer;
+}
+
+.ha-gallery-item img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:.5s;
+}
+
+.ha-gallery-item:hover img{
+  transform:scale(1.08);
+}
+
+.ha-gallery-overlay{
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+  align-items:flex-end;
+
+  padding:18px;
+
+  color:#fff;
+
+  background:
+    linear-gradient(
+      transparent 45%,
+      rgba(40,15,10,.75)
+    );
+
+  opacity:0;
+
+  transition:.3s;
+}
+
+.ha-gallery-item:hover .ha-gallery-overlay{
+  opacity:1;
+}
+
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
+
+.ha-lightbox{
+  position:fixed;
+
+  inset:0;
+
+  z-index:999999;
+
+  display:none;
+
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  background:rgba(25,10,7,.92);
+}
+
+.ha-lightbox.active{
+  display:flex;
+}
+
+.ha-lightbox img{
+  max-width:92vw;
+  max-height:88vh;
+
+  border-radius:12px;
+
+  box-shadow:0 20px 70px rgba(0,0,0,.5);
+}
+
+.ha-lightbox-close{
+  position:absolute;
+
+  top:20px;
+  right:25px;
+
+  width:45px;
+  height:45px;
+
+  border:0;
+  border-radius:50%;
+
+  background:#fff;
+
+  color:var(--maroon);
+
+  font-size:25px;
+
+  cursor:pointer;
+}
+
+
+/* ============================================================
+   BOOKS
+============================================================ */
+
+.ha-books-wrapper{
+  position:relative;
+}
+
+.ha-books{
+  display:flex;
+
+  gap:20px;
+
+  overflow-x:auto;
+
+  scroll-behavior:smooth;
+
+  padding:10px 5px 25px;
+
+  scrollbar-width:none;
+}
+
+.ha-books::-webkit-scrollbar{
+  display:none;
+}
+
+.ha-book{
+  flex:0 0 210px;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:17px;
+
+  padding:12px;
+
+  box-shadow:var(--shadow);
+
+  transition:.3s;
+}
+
+.ha-book:hover{
+  transform:translateY(-6px);
+}
+
+.ha-book-cover{
+  width:100%;
+  height:270px;
+
+  object-fit:cover;
+
+  border-radius:10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #762719,
+      #d69b38
+    );
+}
+
+.ha-book h3{
+  font-size:15px;
+
+  line-height:1.45;
+
+  margin:13px 5px 5px;
+
+  color:var(--brown);
+}
+
+.ha-book p{
+  font-size:12px;
+
+  margin:0 5px;
+
+  color:var(--muted);
+}
+
+.ha-book-btn{
+  display:block;
+
+  margin:12px 5px 2px;
+
+  padding:8px;
+
+  text-align:center;
+
+  border-radius:9px;
+
+  background:var(--maroon);
+
+  color:#fff !important;
+
+  font-size:12px;
+
+  font-weight:700;
+}
+
+.ha-slider-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+
+  margin-top:15px;
+}
+
+.ha-slider-btn{
+  width:42px;
+  height:42px;
+
+  border:1px solid var(--border);
+
+  border-radius:50%;
+
+  background:#fff;
+
+  color:var(--maroon);
+
+  cursor:pointer;
+
+  font-size:20px;
+}
+
+
+/* ============================================================
+   ARTICLES
+============================================================ */
+
+.ha-articles{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:20px;
+}
+
+.ha-article{
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:var(--shadow);
+
+  transition:.3s;
+}
+
+.ha-article:hover{
+  transform:translateY(-6px);
+}
+
+.ha-article-image{
+  height:175px;
+
+  width:100%;
+
+  object-fit:cover;
+}
+
+.ha-article-body{
+  padding:21px;
+}
+
+.ha-article-body small{
+  color:var(--red);
+  font-weight:800;
+}
+
+.ha-article-body h3{
+  margin:6px 0 8px;
+
+  font-size:18px;
+
+  line-height:1.4;
+
+  color:var(--brown);
+}
+
+.ha-article-body p{
+  margin:0 0 14px;
+
+  font-size:13px;
+
+  color:var(--muted);
+}
+
+.ha-read{
+  color:var(--maroon);
+
+  font-size:13px;
+
+  font-weight:900;
+}
+
+
+/* ============================================================
+   CONTACT
+============================================================ */
+
+.ha-contact{
+  background:
+    linear-gradient(
+      135deg,
+      #fff4da,
+      #fffdf7
+    );
+}
+
+.ha-contact-box{
+  max-width:900px;
+
+  margin:auto;
+
+  text-align:center;
+
+  padding:45px 30px;
+
+  border:1px solid var(--border);
+
+  border-radius:28px;
+
+  box-shadow:var(--shadow);
+
+  background:#fff;
+}
+
+.ha-contact-box h2{
+  margin:0 0 10px;
+
+  color:var(--brown);
+
+  font-size:32px;
+}
+
+.ha-contact-box p{
+  max-width:650px;
+
+  margin:0 auto 25px;
+
+  color:var(--muted);
+}
+
+.ha-contact-buttons{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+}
+
+.ha-contact-button{
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:12px 20px;
+
+  border-radius:12px;
+
+  background:var(--maroon);
+
+  color:#fff !important;
+
+  font-weight:800;
+}
+
+.ha-contact-button.secondary{
+  background:#fff;
+
+  border:1px solid var(--maroon);
+
+  color:var(--maroon) !important;
+}
+
+
+/* ============================================================
+   SOCIAL
+============================================================ */
+
+.ha-social{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-top:25px;
+}
+
+.ha-social a{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:7px;
+
+  min-width:48px;
+
+  height:46px;
+
+  padding:0 15px;
+
+  border-radius:13px;
+
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  color:var(--maroon);
+
+  font-weight:800;
+
+  transition:.25s;
+}
+
+.ha-social a:hover{
+  background:var(--maroon);
+
+  color:#fff;
+
+  transform:translateY(-3px);
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.ha-footer{
+  background:
+    linear-gradient(
+      135deg,
+      #38120d,
+      #571b12
+    );
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:35px 15px;
+}
+
+.ha-footer-name{
+  font-size:24px;
+
+  font-weight:900;
+
+  color:#ffd17a;
+}
+
+.ha-footer p{
+  margin:4px 0;
+
+  color:rgba(255,255,255,.72);
+
+  font-size:13px;
+}
+
+
+/* ============================================================
+   BACK TO TOP
+============================================================ */
+
+.ha-top{
+  position:fixed;
+
+  right:20px;
+  bottom:20px;
+
+  width:48px;
+  height:48px;
+
+  border:0;
+
+  border-radius:14px;
+
+  background:var(--maroon);
+
+  color:#fff;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(15px);
+
+  transition:.3s;
+
+  z-index:99999;
+
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.ha-top.show{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+
+
+/* ============================================================
+   SCROLL ANIMATION
+============================================================ */
+
+.ha-reveal{
+  opacity:1;
+
+  transform:translateY(30px);
+
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.ha-reveal.visible{
+  opacity:1;
+  margin-top: 20px;
+  transform:none;
+}
+
+
+/* ============================================================
+   ANIMATION
+============================================================ */
+
+@keyframes haRotate{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media(max-width:950px){
+
+  .ha-hero-grid{
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    gap:45px;
+  }
+
+  .ha-hero-text{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .ha-tags,
+  .ha-buttons{
+    justify-content:center;
+	gap: 15px;
+	margin-right: 20px;
+	
+  }
+
+  .ha-about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .ha-mission-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ha-achievement-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ha-articles{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media(max-width:650px){
+
+  .ha-section{
+    padding:55px 0;
+  }
+
+  .ha-hero{
+    min-height:auto;
+
+    padding:
+      60px 0
+      70px;
+  }
+
+  .ha-profile-frame,
+  .ha-profile-photo{
+    width:195px;
+    height:195px;
+  }
+
+  .ha-profile-name{
+    font-size:32px;
+  }
+
+  .ha-hero-title{
+    font-size:32px;
+  }
+
+  .ha-hero-text{
+    font-size:15px;
+  }
+
+  .ha-section-title h2{
+    font-size:28px;
+  }
+
+  .ha-card{
+    padding:24px 19px;
+  }
+
+  .ha-mission-grid{
+    grid-template-columns:1fr;
+  }
+
+  .ha-achievement-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ha-gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ha-gallery-item{
+    height:180px;
+  }
+
+  .ha-articles{
+    grid-template-columns:1fr;
+  }
+
+  .ha-info{
+    grid-template-columns:110px 1fr;
+  }
+
+  .ha-contact-box{
+    padding:32px 20px;
+  }
+
+}
+
+/* ==========================================================
+   CATEGORY TABS
+========================================================== */
+
+.ha-category-tabs{
+  display:flex;
+  gap:9px;
+
+  margin:25px 0 22px;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+
+  padding:5px 2px 8px;
+}
+
+.ha-category-tabs::-webkit-scrollbar{
+  display:none;
+}
+
+
+/* TAB BUTTON */
+
+.ha-category-tab{
+
+  flex:0 0 auto;
+
+  border:1px solid var(--border);
+
+  background:rgba(255,255,255,.85);
+
+  color:var(--maroon);
+
+  padding:10px 16px;
+
+  border-radius:50px;
+
+  font-family:inherit;
+
+  font-size:13px;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}
+
+
+/* HOVER */
+
+.ha-category-tab:hover{
+
+  transform:translateY(-2px);
+
+  border-color:var(--gold);
+
+}
+
+
+/* ACTIVE TAB */
+
+.ha-category-tab.active{
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--maroon),
+      var(--red)
+    );
+
+  color:#fff;
+
+  border-color:var(--maroon);
+
+  box-shadow:
+    0 7px 18px rgba(118,39,25,.22);
+
+}
+
+
+/* ==========================================================
+   TAB CONTENT AREA
+========================================================== */
+
+.ha-tab-content-area{
+
+  position:relative;
+
+  min-height:175px;
+
+}
+
+
+/* CONTENT */
+
+.ha-tab-content{
+
+  display:none;
+	
+  align-items:start;
+
+  padding:25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.95),
+      rgba(255,248,232,.95)
+    );
+
+  border:1px solid var(--border);
+
+  border-radius:20px;
+
+  box-shadow:
+    0 12px 35px rgba(70,35,20,.08);
+
+  animation:
+    haTabOpen .35s ease;
+
+}
+
+
+/* ACTIVE CONTENT */
+
+.ha-tab-content.active{
+
+  display:grid;
+
+}
+
+
+/* ICON */
+
+.ha-tab-icon{
+
+  width:65px;
+
+  height:65px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0cd,
+      #ffe0a1
+    );
+
+  border:1px solid var(--border);
+
+  font-size:30px;
+
+}
+
+
+/* CONTENT TITLE */
+
+.ha-tab-content h3{
+
+  margin:0 0 7px;
+
+  color:var(--maroon);
+
+  font-size:22px;
+
+}
+
+
+/* CONTENT TEXT */
+
+.ha-tab-content p{
+
+  margin:0;
+
+  color:var(--text);
+
+  font-size:25px;
+
+  line-height:1.8;
+
+}
+
+
+/* POINTS */
+
+.ha-tab-points{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  margin-top:15px;
+
+}
+
+.ha-tab-points span{
+
+  padding:6px 11px;
+
+  border-radius:50px;
+
+  background:#fff;
+
+  border:1px solid #ead6ae;
+
+  color:var(--maroon);
+
+  font-size:12px;
+
+  font-weight:700;
+
+}
+
+
+/* ANIMATION */
+
+@keyframes haTabOpen{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(10px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:650px){
+
+  .ha-category-tabs{
+
+    margin-top:20px;
+
+    padding-left:2px;
+
+    padding-right:2px;
+
+  }
+
+  .ha-category-tab{
+
+    font-size:12px;
+
+    padding:9px 13px;
+
+  }
+
+  .ha-tab-content{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    padding:23px 18px;
+
+  }
+
+  .ha-tab-icon{
+
+    margin:auto;
+
+  }
+
+  .ha-tab-content h3{
+
+    font-size:20px;
+
+  }
+
+  .ha-tab-content p{
+
+    font-size:13px;
+	margin-right: 20px;
+
+  }
+
+  .ha-tab-points{
+
+    justify-content:center;
+
+  }
+
+}
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media(max-width:400px){
+
+  .ha-achievement-grid{
+    grid-template-columns:1fr;
+  }
+
+  .ha-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .ha-gallery-item{
+    height:230px;
+  }
+
+  .ha-buttons .ha-btn{
+    display: flex;
+    gap: 15px;
+	margin-right: 20px;
+  }
+
+  .ha-info{
+    grid-template-columns:1fr;
+    gap:3px;
+  }
+
+}
+
+</style>
+
+
+<!-- ============================================================
+     PAGE
+============================================================ -->
+
+<div id="halba-about">
+
+  <!-- TOP TRIBAL BORDER -->
+  <div class="ha-pattern"></div>
+
+
+  <!-- SUBTLE WATERMARKS -->
+
+  <div class="ha-watermark left">
+    ॐ
+  </div>
+
+  <div class="ha-watermark right">
+    ॐ
+  </div>
+
+
+  <!-- ========================================================
+       HERO
+  ========================================================= -->
+
+  <section class="ha-hero">
+
+    <div class="ha-container">
+
+      <div class="ha-hero-grid">
+
+
+        <!-- PROFILE -->
+
+        <div class="ha-profile ha-reveal">
+
+          <div class="ha-profile-frame">
+
+            <!-- अपनी प्रोफाइल फोटो का URL -->
+            <img src="./admin.png" alt="Aaryan_Chiram">
+          </div>
+
+          <h1 class="ha-profile-name">
+            आर्यन चिराम
+          </h1>
+
+          <div class="ha-profile-role">
+            लेखक • कवि • संपादक • प्रकाशक • सामाजिक कार्यकर्ता
+          </div>
+
+        </div>
+
+
+        <!-- HERO CONTENT -->
+
+        <div class="ha-reveal">
+
+          <div class="ha-badge">
+            🌺 जय माँ दंतेश्वरी
+          </div>
+
+          <h2 class="ha-hero-title">
+
+            समाज, संस्कृति और
+            <span>विचारों के लिए समर्पित</span>
+
+          </h2>
+
+          <p class="ha-hero-text">
+
+            हल्बा-हल्बी समाज, आदिवासी संस्कृति, इतिहास,
+            परंपरा, भाषा और सामाजिक जागरूकता से जुड़े विषयों
+            पर लेखन, अध्ययन तथा सामाजिक गतिविधियों के माध्यम
+            से योगदान देने का निरंतर प्रयास।
+
+          </p>
+
+
+         <!-- ==========================================================
+     CATEGORY TABS
+========================================================== -->
+
+<div class="ha-category-tabs" role="tablist">
+
+<button
+    class="ha-category-tab active"
+    type="button"
+    data-tab="details">
+    🏹 मेरा
+  </button>
+	
+	<button
+    class="ha-category-tab"
+    type="button"
+    data-tab="culture">
+    🏹 मेरा सामाजिक यात्रा
+  </button>
+
+  <button
+    class="ha-category-tab"
+    type="button"
+    data-tab="society">
+    🌿 सामाजिक कार्य
+  </button>
+
+  <button
+    class="ha-category-tab"
+    type="button"
+    data-tab="writing">
+    📚 लेखन
+  </button>
+
+  <button
+    class="ha-category-tab"
+    type="button"
+    data-tab="research">
+    🔎 शिक्षा
+  </button>
+
+  <button
+    class="ha-category-tab"
+    type="button"
+    data-tab="service">
+    🤝 सामाजिक सेवा
+  </button>
+
+</div>
+
+
+<!-- ==========================================================
+     TAB CONTENT
+========================================================== -->
+
+<div class="ha-tab-content-area">
+
+<!-- मेरा -->
+
+  <div
+    class="ha-tab-content active"
+    id="details">
+
+    <div class="ha-tab-icon">
+      🏹
+    </div>
+
+    <div>
+
+      <h3>
+        मेरा
+      </h3>
+<h3>          <div class="ha-info">
+              <div class="ha-info-label">
+                नाम 
+              </div>
+
+              <div class="ha-info-value">
+               तुमेश कुमार चिराम (आर्यन चिराम)
+              </div>
+            </div>
+
+	<div class="ha-info">
+              <div class="ha-info-label">
+                जन्मतिथि
+              </div>
+
+              <div class="ha-info-value">
+               02/04/1994
+              </div>
+            </div>
+
+	<div class="ha-info">
+              <div class="ha-info-label">
+                पिता का नाम 
+              </div>
+
+              <div class="ha-info-value">
+              स्व.श्री तुलसी राम चिराम
+              </div>
+
+            </div>
+
+            <div class="ha-info">
+
+              <div class="ha-info-label">
+               माता का नाम
+              </div>
+
+              <div class="ha-info-value">
+               श्रीमती रामेश्वरी चिराम
+              </div>
+
+            </div>
+
+
+            <div class="ha-info">
+
+              <div class="ha-info-label">
+                पता 
+              </div>
+
+              <div class="ha-info-value">
+                ग्राम+पोस्ट कोदागाँव पटेल पारा
+				तह+जिला उत्तर बस्तर कांकेर छतीसगढ़ 
+				पिन नंबर 494670
+              </div>
+
+            </div>
+	<div class="ha-info">
+
+              <div class="ha-info-label">
+                संपर्क 
+              </div>
+
+              <div class="ha-info-value">
+			<div class="ha-contact-buttons">
+          <a
+            class="ha-contact-button"
+            href="mailto:aaryanchiram@gmail.com">
+            ✉ ई-मेल करें
+          </a>
+          <a
+            class="ha-contact-button secondary"
+            href="tel:7999054095">
+            ☎ संपर्क करें
+          </a>
+        </div>
+				वेबसाइट <a href="https://aaryan-chiram.blogspot.com" 
+           class="link-card" data-cat="main" target="_blank" rel="noopener">
+          <div class="card-icon">📱</div>
+          <div class="card-text">
+            <div class="card-title">aaryan chiram</div>
+          </div>
+        </a>
+              </div>
+
+            </div>
+
+ <div class="ha-tab-points">
+
+        <span>🌿 परंपरा</span>
+        <span>🎵 लोकसंस्कृति</span>
+        <span>🏹 आदिवासी विरासत</span>
+        <span>🪶 लोककला</span>
+
+      </div>
+          </div>  
+  </div>
+	
+     
+
+   
+	
+  <!-- मेरा सामाजिक यात्रा -->
+
+  <div
+    class="ha-tab-content"
+    id="culture">
+
+    <div class="ha-tab-icon">
+      🏹
+    </div>
+
+    <div>
+
+      <h3>
+        मेरा सामाजिक यात्रा
+      </h3>
+
+     <h1>मेरा सामाजिक यात्रा</h1><p>मेरा जन्म <strong>कोदागाँव</strong> में हुआ, जो छत्तीसगढ़ के कांकेर जिले के अंतर्गत आता है। कोदागाँव जिले के बड़े गाँवों में से एक है और इसी गाँव की मिट्टी में मेरा बचपन बीता। मेरा बचपन गाँव की सरलता, सामाजिक वातावरण और सामुदायिक जीवन के बीच गुजरा।</p><p>मेरे पिता जी का देहांत मेरे बचपन में ही हो गया था। उनके न रहने के कारण मेरे पालन-पोषण और जीवन की जिम्मेदारियाँ मेरी माँ ने ही संभालीं। सीमित परिस्थितियों के बावजूद मेरी माँ ने मुझे आगे बढ़ने और शिक्षा प्राप्त करने के लिए हमेशा प्रेरित किया। मेरी प्रारंभिक शिक्षा गाँव में ही हुई और आगे की पढ़ाई के लिए मैंने कांकेर में कॉलेज की शिक्षा प्राप्त की। मेरी पढ़ाई आज भी जारी है, क्योंकि मेरा मानना है कि सीखने की कोई अंतिम सीमा नहीं होती।</p><h2>समाज के प्रति जिज्ञासा की शुरुआत</h2><p>समाज के प्रति मेरी जिज्ञासा और रुचि बचपन से ही रही है। हमारे घर में कोई बड़ा सियान या ऐसा व्यक्ति नहीं था जो मुझे सामाजिक बैठकों में ले जाता, फिर भी मैं बचपन से ही सामाजिक गतिविधियों को करीब से देखने और समझने के लिए उत्सुक रहता था।</p><p>जब मैं लगभग <strong>कक्षा 9वीं का विद्यार्थी था</strong>, तभी से मैंने सामाजिक बैठकों और कार्यक्रमों में जाना शुरू कर दिया था। शुरुआत में मैं दिन के समय होने वाली बैठकों और सामाजिक कार्यक्रमों में ही शामिल होता था। जैसे-जैसे मेरी उम्र बढ़ती गई, सामाजिक गतिविधियों के प्रति मेरी रुचि भी बढ़ती गई और धीरे-धीरे रात में होने वाली सामाजिक बैठकों में भी जाने लगा।</p><p>समय के साथ समाज में मेरा उठना-बैठना बढ़ता गया। समाज की छोटी-बड़ी गतिविधियों में भाग लेना मुझे अच्छा लगने लगा। जब भी कहीं समाज के बारे में चर्चा होती, मैं उसे बहुत धैर्य और उत्सुकता से सुनता था। इन चर्चाओं और बैठकों ने मुझे अपने समाज को बहुत करीब से जानने और समझने का अवसर दिया।</p><p>आज भी समाज को जानने, समझने और उसके इतिहास, संस्कृति, परंपरा तथा वर्तमान परिस्थितियों के बारे में सीखने की मेरी जिज्ञासा लगातार बनी हुई है।</p><h2>राजा राव पठार का वह अनुभव</h2><p>मेरी सामाजिक यात्रा में एक ऐसी घटना भी है, जिसने मेरे मन पर बहुत गहरा प्रभाव डाला और शायद उसी ने मेरे जीवन की दिशा तय करने में महत्वपूर्ण भूमिका निभाई।</p><p>जब मैं छोटा था, उस समय <strong>जिला धमतरी के राजा राव पठार में आदिवासी कार्यक्रम और वीर मेला</strong> आयोजित हुआ था। मैं भी अपने गाँव के लोगों के साथ ट्रैक्टर से वीर मेले में पहुँचा था।</p><p>मेरे अंदर उस समय बहुत उत्साह था। मैं अपने दोस्तों के साथ मेले का आनंद ले रहा था। वहाँ अलग-अलग समाजों के पेन, कॉपी, पुस्तकें, सीडी, कैसेट, ध्वज और अन्य सामग्री बिक रही थी। मेरे दोस्तों ने अपने-अपने समाज से संबंधित सामग्री खरीदनी शुरू की।</p><p>उन्हें देखकर मेरे मन में भी इच्छा हुई कि मैं अपने समाज की कोई चीज खरीदूँ। मैंने सोचा कि हमारे समाज का भी पेन होगा, कॉपी होगी, पुस्तक होगी या कोई ध्वज होगा।</p><p>मैं एक दुकान से दूसरी दुकान तक जाता रहा।</p><p>लेकिन मुझे अपने समाज से संबंधित ऐसी कोई सामग्री नहीं मिली।</p><p>उस समय मैं एक अबोध बालक था। मुझे इस बात की बहुत निराशा हुई। मेरे मन में बार-बार यही सवाल उठ रहा था कि <strong>हमारा समाज इतना बड़ा होने के बावजूद हमारे पास अपनी पहचान से जुड़ी सामग्री क्यों नहीं है?</strong></p><p>मेरे दोस्तों के पास उनके समाज की चीजें थीं, लेकिन मेरे पास अपने समाज की कोई वस्तु नहीं थी।</p><p>उस छोटी-सी घटना ने मेरे बाल मन को बहुत गहराई से प्रभावित किया।</p><h2>माँ से कही वह बात</h2><p>जब मैं घर वापस आया तो मैंने अपनी माँ से कहा कि मेरे दोस्त अपने समाज की चीजें खरीदकर लाए हैं—किसी ने पेन खरीदा, किसी ने कॉपी, किसी ने दूसरी सामग्री—लेकिन मैं अपने समाज की कोई चीज नहीं खरीद पाया।</p><p>मैंने माँ से कहा कि <strong>हमारे समाज की ऐसी चीजें क्यों नहीं बनतीं? हम सिर्फ समाज की बातें ही क्यों करते रहते हैं?</strong></p><p>माँ ने उस समय कुछ नहीं कहा।</p><p>लेकिन मेरे मन में उसी दिन एक संकल्प पैदा हुआ।</p><p>मैंने मन ही मन ठान लिया कि <strong>मैं अपने समाज के लिए वह सब बनाने और करने का प्रयास करूँगा, जो अभी तक नहीं हुआ है।</strong></p><p>मैं अपने समाज को आगे बढ़ाने के लिए कुछ करूँगा।</p><p>यही विचार धीरे-धीरे मेरे जीवन का उद्देश्य बनता गया।</p><h2>सामाजिक कार्यों की ओर कदम</h2><p>समय बीतता गया और मैं सामाजिक गतिविधियों में अपना सहयोग देता गया। छोटी-छोटी जिम्मेदारियों से शुरुआत हुई और धीरे-धीरे समाज की विभिन्न गतिविधियों में मेरी भागीदारी बढ़ती गई।</p><p>मैंने समाज को केवल बाहर से देखने के बजाय उसे समझने का प्रयास किया। समाज की समस्याओं, हमारी परंपराओं, संस्कृति, इतिहास, सामाजिक व्यवस्था और आने वाली पीढ़ियों की आवश्यकताओं को समझने की कोशिश करता रहा।</p><p>मेरा मानना है कि किसी भी समाज की उन्नति केवल कुछ लोगों के प्रयास से नहीं होती। इसके लिए समाज के प्रत्येक व्यक्ति को अपनी जिम्मेदारी समझनी होगी।</p><h2>सामाजिक सेवा के पीछे मेरा उद्देश्य</h2><p>मेरी इच्छा हमेशा से रही है कि हमारे समाज के लोग बिना किसी स्वार्थ के सामाजिक सेवा करें और अपनी सामाजिक जिम्मेदारियों को समझें।</p><p>यदि हम सभी अपने व्यक्तिगत स्वार्थ से ऊपर उठकर समाज के विकास के लिए काम करें, तो हमारा समाज भी हर क्षेत्र में आगे बढ़ सकता है और दूसरे समाजों के लिए प्रेरणा बन सकता है।</p><p>लेकिन सामाजिक कार्यों के दौरान कई बार ऐसे अनुभव भी हुए, जब लोगों ने उत्साह बढ़ाने के बजाय हतोत्साहित करने का प्रयास किया।</p><p>कभी-कभी यह भी सुनने को मिला—</p><p><strong>“बड़ा आया सामाजिक कार्यकर्ता।”</strong></p><p><strong>“ऐसे तो बहुत देखे हैं।”</strong></p><p><strong>“इतने बड़े-बड़े सियान लोग नहीं कर पाए, ये क्या कर लेगा?”</strong></p><p>पहले ऐसी बातें सुनकर दुख होता था। लगता था कि शायद लोग मेरे प्रयासों को समझ नहीं रहे हैं।</p><p>लेकिन अब इन बातों से मुझे फर्क नहीं पड़ता।</p><p>क्योंकि मैंने यह समझ लिया है कि <strong>अच्छा काम करने वाले व्यक्ति को भी कभी-कभी आलोचना का सामना करना पड़ता है।</strong></p><p>अगर उद्देश्य स्पष्ट हो तो आलोचना रास्ता रोक नहीं सकती।</p><h2>मेरा संकल्प</h2><p>आज मैंने अपने मन में यह ठान लिया है कि कोई कुछ भी कहे, मुझे अपने समाज के लिए काम करते रहना है।</p><p>मुझे समाज से <strong>कोई पद नहीं चाहिए।</strong></p><p>मुझे समाज से <strong>पैसा नहीं चाहिए।</strong></p><p>मुझे किसी प्रकार का व्यक्तिगत लाभ भी नहीं चाहिए।</p><p>मेरी इच्छा केवल इतनी है कि मेरा समाज हर क्षेत्र में आगे बढ़े।</p><p>हमारी आने वाली पीढ़ियाँ अपने इतिहास, संस्कृति, परंपरा और पहचान को समझें। हमारे समाज के बच्चों को शिक्षा, ज्ञान और अवसर मिलें। समाज के लोग अपनी जिम्मेदारियों को समझें और एक-दूसरे का सहयोग करें।</p><h2>मेरा उद्देश्य</h2><p>मेरे लिए सामाजिक कार्य कोई पद या प्रतिष्ठा प्राप्त करने का माध्यम नहीं है।</p><p>यह मेरे जीवन का एक उद्देश्य है।</p><p>मैं चाहता हूँ कि हमारा समाज—</p><ul><li><p>शिक्षा के क्षेत्र में आगे बढ़े।</p></li><li><p>सामाजिक रूप से जागरूक बने।</p></li><li><p>अपनी संस्कृति और परंपराओं को समझे।</p></li><li><p>अपने इतिहास को संरक्षित करे।</p></li><li><p>नई पीढ़ी को अपनी पहचान से जोड़े।</p></li><li><p>तकनीक और आधुनिक संसाधनों का सही उपयोग करे।</p></li><li><p>आर्थिक और सामाजिक रूप से मजबूत बने।</p></li><li><p>आपसी सहयोग और एकता को बढ़ावा दे।</p></li><li><p>समाज के प्रतिभाशाली लोगों को आगे बढ़ने का अवसर दे।</p></li></ul><p>मेरा विश्वास है कि समाज का विकास केवल भाषणों और बैठकों से नहीं, बल्कि <strong>ज्ञान, शिक्षा, संगठन, सहयोग और निरंतर कार्य</strong> से होगा।</p><h2>मेरी मंजिल</h2><p>मैंने अपने जीवन में एक बात तय कर ली है—</p><p><strong>जब तक जीवन है, तब तक समाज की उन्नति और विकास के बारे में सोचता रहूँगा और अपनी क्षमता के अनुसार कार्य करता रहूँगा।</strong></p><p>मेरी यात्रा अभी पूरी नहीं हुई है। बल्कि यह तो एक निरंतर चलने वाली यात्रा है।</p><p>आज जो कुछ भी कर रहा हूँ, वह आने वाली पीढ़ियों के लिए एक छोटी-सी नींव रखने का प्रयास है।</p><p>मेरा सपना है कि एक दिन हमारे समाज को किसी दूसरे समाज से अपनी पहचान की सामग्री, ज्ञान या संसाधन पाने की आवश्यकता न पड़े। हम स्वयं अपनी किताबें लिखें, अपनी संस्कृति का दस्तावेजीकरण करें, अपनी पहचान से जुड़ी सामग्री तैयार करें, अपने इतिहास को सुरक्षित रखें और अपनी आने वाली पीढ़ियों के लिए एक मजबूत आधार तैयार करें।</p><p><strong>न मुझे पद चाहिए, न पैसा और न व्यक्तिगत प्रतिष्ठा।</strong></p><p><strong>मेरा उद्देश्य केवल अपने समाज की उन्नति, विकास और सम्मान है।</strong></p><p>और यही मेरा संकल्प है—</p><blockquote><p><strong>“समाज के लिए सीखना, समाज के लिए काम करना और आने वाली पीढ़ियों के लिए कुछ ऐसा छोड़ जाना, जिसे वे गर्व के साथ आगे बढ़ा सकें।”</strong></p></blockquote><h3>मेरे द्वारा किए गए कुछ प्रमुख कार्य</h3><p>मेरी सामाजिक यात्रा में अब तक किए गए विभिन्न छोटे-बड़े कार्यों, सामाजिक पहलों, लेखन, प्रकाशनों, शोध, डिजिटल परियोजनाओं और अन्य गतिविधियों का विवरण नीचे प्रस्तुत किया जाएगा।</p>
+
+      <div class="ha-tab-points">
+
+        <span>🌿 परंपरा</span>
+        <span>🎵 लोकसंस्कृति</span>
+        <span>🏹 आदिवासी विरासत</span>
+        <span>🪶 लोककला</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- सामाजिक कार्य -->
+
+  <div
+    class="ha-tab-content"
+    id="society">
+
+    <div class="ha-tab-icon">
+      🌿
+    </div>
+
+    <div>
+
+      <h3>
+        सामाजिक कार्य
+      </h3>
+
+      <p>
+<section class="samajik-section">
+    <div class="section-header">
+      <h2>सामाजिक कार्यों की सूची</h2>
+      <p>Halba Samaj • सामाजिक एप • जानकारी • संसाधन</p>
+    </div>
+
+    <div class="content-wrap">
+      <!-- Category Filter Buttons -->
+      <div class="category-tabs">
+        <button class="tab-btn active" data-cat="all">सभी</button>
+      </div>
+
+      <!-- Links Grid -->
+      <div class="links-grid" id="linksGrid">
+
+        <!-- ===== मुख्य साइट / एप ===== -->
+        <a href="https://play.google.com/store/apps/details?id=com.aaryanchiram" 
+           class="link-card" data-cat="main" target="_blank" rel="noopener">
+          <div class="card-icon">📱</div>
+          <div class="card-text">
+            <div class="card-title">सामाजिक एप</div>
+            <div class="card-sub">एप डाउनलोड करें</div>
+          </div>
+        </a>
+
+        <a href="https://halba-samaj-suchna.blogspot.com/" 
+           class="link-card" data-cat="main" target="_blank" rel="noopener">
+          <div class="card-icon">📢</div>
+          <div class="card-text">
+            <div class="card-title">हल्बा सुचना</div>
+            <div class="card-sub">क्लिक कीजिए</div>
+          </div>
+        </a>
+
+        <a href="https://halba-halbi-samaj.blogspot.com/p/halba-samaj-ditals.html?m=1" 
+           class="link-card" data-cat="main" target="_blank" rel="noopener">
+          <div class="card-icon">🏠</div>
+          <div class="card-text">
+            <div class="card-title">हल्बा समाज साईट</div>
+            <div class="card-sub">मुख्य वेबसाइट</div>
+          </div>
+        </a>
+
+        <!-- ===== पुस्तकें व संसाधन ===== -->
+        <a href="https://amzn.to/3Mpae9F" 
+           class="link-card" data-cat="books" target="_blank" rel="noopener">
+          <div class="card-icon">📖</div>
+          <div class="card-text">
+            <div class="card-title">हल्बी पहाड़ा भाग-1</div>
+            <div class="card-sub">पुस्तक खरीदें</div>
+          </div>
+        </a>
+
+        <a href="https://amzn.to/3HPTyV8" 
+           class="link-card" data-cat="books" target="_blank" rel="noopener">
+          <div class="card-icon">📘</div>
+          <div class="card-text">
+            <div class="card-title">युवा क्रांति</div>
+            <div class="card-sub">पुस्तक देखें</div>
+          </div>
+        </a>
+
+        <a href="https://halbasamaj-halbi-git.blogspot.com/" 
+           class="link-card" data-cat="books" target="_blank" rel="noopener">
+          <div class="card-icon">🎵</div>
+          <div class="card-text">
+            <div class="card-title">हल्बी गोंडी गीत</div>
+            <div class="card-sub">गीत सुनें / देखें</div>
+          </div>
+        </a>
+
+        <a href="#" class="link-card disabled" data-cat="books">
+          <div class="card-icon">📅</div>
+          <div class="card-text">
+            <div class="card-title">हल्बा क्रांति कैलेण्डर</div>
+            <div class="card-sub">2018 – 2021 (जल्द उपलब्ध)</div>
+          </div>
+        </a>
+
+        <a href="#" class="link-card disabled" data-cat="books">
+          <div class="card-icon">🔬</div>
+          <div class="card-text">
+            <div class="card-title">सामाजिक शोध</div>
+            <div class="card-sub">शोध सामग्री (जल्द)</div>
+          </div>
+        </a>
+
+        <!-- ===== सोशल मीडिया ===== -->
+        <a href="https://www.facebook.com/halba.halbi.samaj/" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">f</div>
+          <div class="card-text">
+            <div class="card-title">Facebook</div>
+            <div class="card-sub">लाइक कीजिए</div>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/Halba_Samaj" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">𝕏</div>
+          <div class="card-text">
+            <div class="card-title">Twitter / X</div>
+            <div class="card-sub">फॉलो कीजिए</div>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/halba.samaj/" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">📷</div>
+          <div class="card-text">
+            <div class="card-title">Instagram</div>
+            <div class="card-sub">फॉलो कीजिए</div>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/c/halbasamaj" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">▶</div>
+          <div class="card-text">
+            <div class="card-title">YouTube</div>
+            <div class="card-sub">सब्सक्राइब कीजिए</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/halba-samaj-b98641a0/" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">in</div>
+          <div class="card-text">
+            <div class="card-title">LinkedIn</div>
+            <div class="card-sub">कनेक्ट कीजिए</div>
+          </div>
+        </a>
+
+        <a href="https://in.pinterest.com/halbasamaz" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">P</div>
+          <div class="card-text">
+            <div class="card-title">Pinterest</div>
+            <div class="card-sub">पिन कीजिए</div>
+          </div>
+        </a>
+
+        <a href="https://www.tumblr.com/blog/view/halba-samaj" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">t</div>
+          <div class="card-text">
+            <div class="card-title">Tumblr</div>
+            <div class="card-sub">Visit</div>
+          </div>
+        </a>
+
+        <a href="https://halbahalbi.wordpress.com/" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">W</div>
+          <div class="card-text">
+            <div class="card-title">WordPress</div>
+            <div class="card-sub">ब्लॉग</div>
+          </div>
+        </a>
+
+        <a href="https://medium.com/@halbasamaj" 
+           class="link-card" data-cat="social" target="_blank" rel="noopener">
+          <div class="card-icon">M</div>
+          <div class="card-text">
+            <div class="card-title">Medium</div>
+            <div class="card-sub">लेख पढ़ें</div>
+          </div>
+        </a>
+
+        <!-- ===== अन्य ===== -->
+        <a href="mailto:halbasamaz@gmail.com" 
+           class="link-card" data-cat="other">
+          <div class="card-icon">✉</div>
+          <div class="card-text">
+            <div class="card-title">E-Mail</div>
+            <div class="card-sub">ई-मेल भेजें</div>
+          </div>
+        </a>
+
+        <a href="https://api.whatsapp.com/send/?phone=917999054095&text=jai+maa+danteshwari" 
+           class="link-card" data-cat="other" target="_blank" rel="noopener">
+          <div class="card-icon">💬</div>
+          <div class="card-text">
+            <div class="card-title">WhatsApp</div>
+            <div class="card-sub">सन्देश भेजें</div>
+          </div>
+        </a>
+
+        <a href="https://halbasamaj-samany-gyan.blogspot.com/" 
+           class="link-card" data-cat="other" target="_blank" rel="noopener">
+          <div class="card-icon">🧠</div>
+          <div class="card-text">
+            <div class="card-title">सामान्य ज्ञान</div>
+            <div class="card-sub">ज्ञान बढ़ाएँ</div>
+          </div>
+        </a>
+
+        <a href="https://halbasamaj-career.blogspot.com/" 
+           class="link-card" data-cat="other" target="_blank" rel="noopener">
+          <div class="card-icon">🎓</div>
+          <div class="card-text">
+            <div class="card-title">कैरियर गाइड</div>
+            <div class="card-sub">गाइडलाइन देखें</div>
+          </div>
+        </a>
+
+        <a href="https://job-alarm.blogspot.com/" 
+           class="link-card" data-cat="other" target="_blank" rel="noopener">
+          <div class="card-icon">🔔</div>
+          <div class="card-text">
+            <div class="card-title">जॉब अलर्ट</div>
+            <div class="card-sub">नौकरी सूचना</div>
+          </div>
+        </a>
+
+        <a href="https://rss.com/podcasts/halbasamaj/" 
+           class="link-card" data-cat="other" target="_blank" rel="noopener">
+          <div class="card-icon">🎧</div>
+          <div class="card-text">
+            <div class="card-title">RSS / Podcast</div>
+            <div class="card-sub">सुनें</div>
+          </div>
+        </a>
+
+        <a href="https://www.reddit.com/user/halbasamaj" 
+           class="link-card" data-cat="other" target="_blank" rel="noopener">
+          <div class="card-icon">R</div>
+          <div class="card-text">
+            <div class="card-title">Reddit</div>
+            <div class="card-sub">Join discussion</div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="empty-msg" id="emptyMsg">इस श्रेणी में कोई लिंक उपलब्ध नहीं है।</div>
+    </div>
+  </section>
+      </p>
+
+      <div class="ha-tab-points">
+
+        <span>🏹 समाज</span>
+        <span>📜 इतिहास</span>
+        <span>🌳 गोत्र एवं टोटम</span>
+        <span>🤝 सामाजिक संगठन</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- लेखन -->
+
+  <div
+    class="ha-tab-content"
+    id="writing">
+
+    <div class="ha-tab-icon">
+      📚
+    </div>
+
+    <div>
+
+      <h3>
+        लेखन
+      </h3>
+<!-- =================================
+     BLOGGER ARTICLES
+================================= -->
+
+<div class="writing-section">
+
+    <div id="articleList">
+
+        <div class="loading">
+            लेख लोड हो रहे हैं...
+        </div>
+
+    </div>
+
+</div>
+      <p>
+        सामाजिक, सांस्कृतिक, ऐतिहासिक और आदिवासी विषयों
+        पर लेख, विचार एवं पुस्तक लेखन के माध्यम से
+        महत्वपूर्ण विषयों को सरल भाषा में प्रस्तुत करने
+        का प्रयास।
+      </p>
+		<script>
+
+/* =========================================
+   BLOGGER SETTINGS
+========================================= */
+
+const BLOG_URL =
+"https://halba-halbi-samaj.blogspot.com";
+
+
+/*
+   कितने लेख दिखाने हैं
+*/
+
+const MAX_POSTS = 10;
+
+
+
+/* =========================================
+   BLOGGER JSONP
+========================================= */
+
+function loadBloggerPosts(){
+
+    const callbackName =
+        "bloggerCallback_" +
+        Date.now();
+
+
+    window[callbackName] = function(data){
+
+        try{
+
+            displayPosts(data);
+
+        }
+        catch(error){
+
+            console.error(error);
+
+            showError();
+
+        }
+
+
+        /* callback हटाना */
+
+        delete window[callbackName];
+
+        script.remove();
+
+    };
+
+
+    const script =
+        document.createElement("script");
+
+
+    script.src =
+        BLOG_URL +
+        "/feeds/posts/default" +
+        "?alt=json-in-script" +
+        "&max-results=" +
+        MAX_POSTS +
+        "&callback=" +
+        callbackName;
+
+
+    script.onerror = function(){
+
+        showError();
+
+        delete window[callbackName];
+
+        script.remove();
+
+    };
+
+
+    document.body.appendChild(script);
+
+}
+
+
+/* =========================================
+   DISPLAY POSTS
+========================================= */
+
+function displayPosts(data){
+
+    const container =
+        document.getElementById("articleList");
+
+
+    container.innerHTML = "";
+
+
+    if(
+        !data.feed ||
+        !data.feed.entry ||
+        data.feed.entry.length === 0
+    ){
+
+        container.innerHTML =
+            '<div class="error-message">' +
+            'कोई लेख नहीं मिला।' +
+            '</div>';
+
+        return;
+
+    }
+
+
+    const posts =
+        data.feed.entry;
+
+
+    posts.forEach(
+        function(post,index){
+
+            const article =
+                createArticle(post,index);
+
+
+            container.appendChild(article);
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   CREATE ARTICLE
+========================================= */
+
+function createArticle(post,index){
+
+    const article =
+        document.createElement("article");
+
+
+    article.className =
+        "article-card";
+
+
+    /*
+       हर दूसरे article को reverse
+    */
+
+    if(index % 2 === 1){
+
+        article.classList.add("reverse");
+
+    }
+
+
+    /* ================================
+       TITLE
+    ================================= */
+
+    const title =
+        post.title &&
+        post.title.$t
+        ? post.title.$t
+        : "बिना शीर्षक";
+
+
+    /* ================================
+       POST URL
+    ================================= */
+
+    let postUrl = "#";
+
+
+    if(post.link){
+
+        const alternate =
+            post.link.find(
+                function(link){
+
+                    return link.rel === "alternate";
+
+                }
+            );
+
+
+        if(alternate){
+
+            postUrl =
+                alternate.href;
+
+        }
+
+    }
+
+
+    /* ================================
+       DATE
+    ================================= */
+
+    let dateText = "";
+
+
+    if(post.published){
+
+        const date =
+            new Date(
+                post.published.$t
+            );
+
+
+        dateText =
+            date.toLocaleDateString(
+                "hi-IN",
+                {
+                    day:"numeric",
+                    month:"long",
+                    year:"numeric"
+                }
+            );
+
+    }
+
+
+    /* ================================
+       DESCRIPTION
+    ================================= */
+
+    let description =
+        "";
+
+
+    if(
+        post.summary &&
+        post.summary.$t
+    ){
+
+        description =
+            cleanText(
+                post.summary.$t
+            );
+
+    }
+    else if(
+        post.content &&
+        post.content.$t
+    ){
+
+        description =
+            cleanText(
+                post.content.$t
+            );
+
+    }
+
+
+    /*
+       Description छोटा करें
+    */
+
+    description =
+        truncateText(
+            description,
+            180
+        );
+
+
+    /* ================================
+       IMAGE
+    ================================= */
+
+    const imageUrl =
+        getPostImage(post);
+
+
+    /* ================================
+       HTML
+    ================================= */
+
+    article.innerHTML = `
+
+        <div class="article-image">
+
+            <a
+                href="${escapeHtml(postUrl)}"
+                target="_blank"
+                rel="noopener"
+            >
+
+                <img
+                    src="${escapeHtml(imageUrl)}"
+                    alt="${escapeHtml(title)}"
+                    loading="lazy"
+                >
+
+            </a>
+
+        </div>
+
+
+        <div class="article-content">
+
+            <span class="article-date">
+                ${dateText}
+            </span>
+
+
+            <h2>
+                ${escapeHtml(title)}
+            </h2>
+
+
+            <p>
+                ${escapeHtml(description)}
+            </p>
+
+
+            <a
+                href="${escapeHtml(postUrl)}"
+                target="_blank"
+                rel="noopener"
+                class="read-more"
+            >
+
+                पूरा लेख पढ़ें
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    `;
+
+
+    return article;
+
+}
+
+
+/* =========================================
+   GET POST IMAGE
+========================================= */
+
+function getPostImage(post){
+
+    /*
+       Blogger thumbnail
+    */
+
+    if(
+        post.media$thumbnail &&
+        post.media$thumbnail.url
+    ){
+
+        let image =
+            post.media$thumbnail.url;
+
+
+        /*
+           Thumbnail को बड़ा करें
+        */
+
+        image =
+            image.replace(
+                /\/s[0-9]+(-c)?\//,
+                "/s800/"
+            );
+
+
+        return image;
+
+    }
+
+
+    /*
+       Content के अंदर पहली image
+    */
+
+    if(
+        post.content &&
+        post.content.$t
+    ){
+
+        const temp =
+            document.createElement("div");
+
+
+        temp.innerHTML =
+            post.content.$t;
+
+
+        const img =
+            temp.querySelector("img");
+
+
+        if(img && img.src){
+
+            return img.src;
+
+        }
+
+    }
+
+
+    /*
+       Fallback image
+    */
+
+    return "https://placehold.co/800x500?text=Article";
+
+}
+
+
+/* =========================================
+   CLEAN HTML
+========================================= */
+
+function cleanText(html){
+
+    const temp =
+        document.createElement("div");
+
+
+    temp.innerHTML =
+        html;
+
+
+    return temp.textContent ||
+           temp.innerText ||
+           "";
+
+}
+
+
+/* =========================================
+   TRUNCATE
+========================================= */
+
+function truncateText(text,maxLength){
+
+    text =
+        text.trim();
+
+
+    if(text.length <= maxLength){
+
+        return text;
+
+    }
+
+
+    return (
+        text.substring(0,maxLength)
+        .trim()
+        + "..."
+    );
+
+}
+
+
+/* =========================================
+   ESCAPE HTML
+========================================= */
+
+function escapeHtml(text){
+
+    return String(text)
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+function showError(){
+
+    document.getElementById(
+        "articleList"
+    ).innerHTML = `
+
+        <div class="error-message">
+
+            लेख लोड नहीं हो सके।
+            कृपया थोड़ी देर बाद पुनः प्रयास करें।
+
+        </div>
+
+    `;
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+loadBloggerPosts();
+
+</script>
+
+      <div class="ha-tab-points">
+
+        <span>✍️ लेख</span>
+        <span>📖 पुस्तक</span>
+        <span>📝 विचार</span>
+        <span>📰 संपादन</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- शिक्षा -->
+
+  <div
+    class="ha-tab-content"
+    id="research">
+
+    <div class="ha-tab-icon">
+      🔎
+    </div>
+
+    <div>
+
+      <h3>
+        शिक्षा
+      </h3>
+
+      <p>
+        <div class="yogyata-section">
+  <h2 class="yogyata-title">शैक्षणिक योग्यता</h2>
+  <p class="yogyata-sub">सभी क्लास की मार्कशीट देखें</p>
+
+  <div class="yogyata-list">
+
+    <!-- 10वीं -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">📄</div>
+        <div class="yogyata-info">
+          <h4>10वीं कक्षा</h4>
+			
+          <p>मार्कशीट / सर्टिफिकेट</p>
+        </div>
+      </div>
+      <a href="./10th.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+    <!-- 12वीं -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">📄</div>
+        <div class="yogyata-info">
+          <h4>12वीं कक्षा</h4>
+          <p>मार्कशीट / सर्टिफिकेट</p>
+        </div>
+      </div>
+      <a href="./12th.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+    <!-- स्नातक बी. ए. -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4>बी. ए.</h4>
+          <p>डिग्री / मार्कशीट</p>
+        </div>
+      </div>
+      <a href="./B.%20A.%20FAINAL.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+	   
+	  <!-- स्नातक बी.एससी. -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4>बी.एससी.</h4>
+          <p>डिग्री / मार्कशीट</p>
+        </div>
+      </div>
+      <a href="./bsc.png" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+    <!-- पोस्ट ग्रेजुएशन समाजशास्त्र -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4> समाजशास्त्र </h4>
+          <p>डिग्री / मार्कशीट</p>
+        </div>
+      </div>
+      <a href="./MA%20sociology%20fainl.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+	  <!-- पोस्ट ग्रेजुएशन गणित -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4>गणित</h4>
+          <p>डिग्री / मार्कशीट</p>
+        </div>
+      </div>
+      <a href="./Msc%20maths%20Fainal.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+<!-- पोस्ट ग्रेजुएशन अर्थशास्त्र -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4>अर्थशास्त्र</h4>
+          <p>डिग्री / मार्कशीट</p>
+        </div>
+      </div>
+      <a href="./ECONOMICES%20FAINAL.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+	  <!-- पोस्ट ग्रेजुएशन संस्कृत -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4>संस्कृत</h4>
+          <p>डिग्री / मार्कशीट</p>
+        </div>
+      </div>
+      <a href="./ma%20sanskrit.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+	  <!-- पोस्ट ग्रेजुएशन इतिहास -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4>इतिहास</h4>
+          <p>डिग्री / मार्कशीट</p>
+        </div>
+      </div>
+      <a href="./history.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+<!-- पोस्ट ग्रेजुएशन हिंदी -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">🎓</div>
+        <div class="yogyata-info">
+          <h4>हिंदी</h4>
+          <p>अध्ययनरत</p>
+        </div>
+      </div>
+      <a href="YOUR_PG_LINK_HERE" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+	  
+    <!-- डी.एड -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">📜</div>
+        <div class="yogyata-info">
+          <h4>डी.एड</h4>
+          <p> डी.एड सर्टिफिकेट</p>
+        </div>
+      </div>
+      <a href="./ded.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+	  <!-- कंप्यूटर -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">📜</div>
+        <div class="yogyata-info">
+          <h4>कंप्यूटर</h4>
+          <p>कंप्यूटर सर्टिफिकेट</p>
+        </div>
+      </div>
+      <a href="./computer.jpg" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+
+		  <!-- TET -->
+    <div class="yogyata-item">
+      <div class="yogyata-left">
+        <div class="yogyata-icon">📜</div>
+        <div class="yogyata-info">
+          <h4>TET</h4>
+          <p>TET सर्टिफिकेट</p>
+        </div>
+      </div>
+      <a href="./tet.pdf" 
+         class="yogyata-btn" 
+         target="_blank" 
+         rel="noopener">
+        देखें
+      </a>
+    </div>
+	  
+  </div>
+</div>
+      </p>
+
+      <div class="ha-tab-points">
+
+        <span>🔎 शोध</span>
+        <span>📜 इतिहास</span>
+        <span>📚 अध्ययन</span>
+        <span>🗂️ दस्तावेजीकरण</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- सामाजिक सेवा सम्मान -->
+
+  <div
+    class="ha-tab-content"
+    id="service">
+
+    <div class="ha-tab-icon">
+      🤝
+    </div>
+
+    <div>
+
+      <h3>
+        सामाजिक सेवा सम्मान
+      </h3>
+
+      <p>
+        <div class="samman-section">
+  <h2 class="samman-title">सामाजिक सम्मान एवं प्रशस्ति पत्र</h2>
+  <p class="samman-sub">समाज सेवा एवं योगदान के लिए प्राप्त सम्मान</p>
+
+  <div class="samman-grid">
+    <div class="samman-card">
+      <div class="samman-icon">🏆</div>
+      <h4>सामाजिक सेवा सम्मान</h4>
+      <p>जिला स्तरीय</p>
+      <a href="./1.jpeg" class="samman-btn" target="_blank">देखें</a>
+    </div>
+
+    <div class="samman-card">
+      <div class="samman-icon">📜</div>
+      <h4>प्रशस्ति पत्र</h4>
+      <p>सामाजिक साहित्य</p>
+      <a href="./2.jpeg" class="samman-btn" target="_blank">देखें</a>
+    </div>
+
+    <div class="samman-card">
+      <div class="samman-icon">🎖️</div>
+      <h4>रक्त वीर सम्मान</h4>
+      <p>आदिवासी संस्कृति संरक्षण</p>
+      <a href="./3.jpeg" class="samman-btn" target="_blank">देखें</a>
+    </div>
+
+    <div class="samman-card">
+      <div class="samman-icon">🏅</div>
+      <h4>रक्त दान प्रशस्ति पत्र</h4>
+      <p>सामाजिक कार्यकर्ता सम्मान</p>
+      <a href="./4.jpeg" class="samman-btn" target="_blank">देखें</a>
+    </div>
+  </div>
+
+  <!-- फोटो गैलरी -->
+  <h3 class="samman-gallery-title">सम्मान समारोह की झलकियाँ</h3>
+  <div class="samman-gallery">
+    <div class="gallery-card">
+      <img src="./CALEDAR.jpg" alt="सम्मान" class="gallery-img">
+      <div class="gallery-caption">
+        <h5>सम्मान समारोह</h5>
+        <p>2018</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="./BOOK.jpg" alt="प्रशस्ति" class="gallery-img">
+      <div class="gallery-caption">
+        <h5>प्रशस्ति पत्र वितरण</h5>
+        <p>2019</p>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <img src="./rajarav.jpeg" alt="समाज" class="gallery-img">
+      <div class="gallery-caption">
+        <h5>समाज सम्मान</h5>
+        <p>2019</p>
+      </div>
+    </div>
+  </div>
+</div>
+      </p>
+
+      <div class="ha-tab-points">
+
+        <span>🤝 समाज सेवा</span>
+        <span>📢 जागरूकता</span>
+        <span>👥 युवा सहभागिता</span>
+        <span>📚 शिक्षा</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+          
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+	<div class="ha-buttons">
+
+            <a
+              class="ha-btn ha-btn-main"
+              href="#about">
+              ↓ मेरे बारे में
+            </a>
+
+            <a
+              class="ha-btn ha-btn-outline"
+              href="#contact">
+              ✉ संपर्क करें
+            </a>
+
+          </div>
+
+
+  <!-- ========================================================
+       ABOUT
+  ========================================================= -->
+
+  <section
+    class="ha-section"
+    id="about">
+
+    <div class="ha-container">
+
+
+      <div class="ha-section-title ha-reveal">
+
+        <span class="ha-kicker">
+          ABOUT ME
+        </span>
+
+        <h2>
+          मेरी सामाजिक यात्रा
+        </h2>
+
+        <div class="ha-heading-decoration">
+          <span>◆</span>
+        </div>
+
+      </div>
+
+
+      <div class="ha-about-grid">
+
+
+        <!-- STORY -->
+
+        <article class="ha-card ha-reveal">
+
+          <h3>
+            🪶 मेरी यात्रा
+          </h3>
+
+          <p>
+            मेरा जन्म स्थान कोदागाँव है, जो कांकेर जिले के
+            अंतर्गत आता है। मेरा बचपन गाँव में ही बीता और
+            मेरी प्रारंभिक पढ़ाई भी गाँव में हुई।
+          </p>
+
+          <p>
+            बचपन से ही समाज के प्रति मेरी जिज्ञासा और रुचि
+            रही। विद्यार्थी जीवन से सामाजिक बैठकों एवं
+            गतिविधियों को करीब से देखने और उनमें भाग लेने
+            का अवसर मिला।
+          </p>
+
+          <p>
+            समय के साथ सामाजिक गतिविधियों में मेरी रुचि
+            बढ़ती गई और समाज से जुड़े इतिहास, परंपराओं,
+            संस्कृति तथा सामाजिक विषयों को समझने की इच्छा
+            और मजबूत होती गई।
+          </p>
+
+          <div class="ha-quote">
+
+            “समाज की उन्नति केवल किसी एक व्यक्ति की
+            जिम्मेदारी नहीं, बल्कि हम सभी की सामूहिक
+            जिम्मेदारी है।”
+
+          </div>
+
+        </article>
+
+
+        <!-- INFORMATION -->
+
+        <article class="ha-card ha-reveal">
+
+          <h3>
+            👤 सामाजिक दायित्व
+          </h3>
+
+
+          <div class="ha-info-list">
+
+
+            <div class="ha-info">
+
+              <div class="ha-info-label">
+               वर्ष 2014 से 2018 तक
+              </div>
+
+              <div class="ha-info-value">
+               ब्लॉक युवा सचिव ब्लॉक कांकेर
+              </div>
+
+            </div>
+
+
+            <div class="ha-info">
+
+              <div class="ha-info-label">
+             वर्ष 2018 से 2022 तक
+              </div>
+
+              <div class="ha-info-value">
+               ब्लॉक युवा अध्यक्ष ब्लॉक कांकेर
+              </div>
+
+            </div>
+
+
+            <div class="ha-info">
+
+              <div class="ha-info-label">
+                वर्ष 2022 से 2025 तक
+              </div>
+
+              <div class="ha-info-value">
+               जिला युवा सचिव जिला कांकेर , कर्मचारी प्रकोष्ट प्रवक्ता जिला कांकेर,
+              </div>
+
+            </div>
+
+
+            <div class="ha-info">
+
+              <div class="ha-info-label">
+                वर्ष 2025 से अब तक
+              </div>
+
+              <div class="ha-info-value">
+                मिडिया प्रभारी युवा प्रभाग महासभा स्तर 36गढ़ महासभा, ब्लॉक कर्मचारी प्रकोष्ट सदस्य
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       MISSION
+  ========================================================= -->
+
+  <section class="ha-section ha-mission">
+
+    <div class="ha-container">
+
+
+      <div class="ha-section-title ha-reveal">
+
+        <span
+          class="ha-kicker"
+          style="color:#ffd27b;">
+
+          MY MISSION
+
+        </span>
+
+        <h2>
+          मेरा उद्देश्य
+        </h2>
+
+        <p>
+          ज्ञान, संस्कृति और सामाजिक जागरूकता के माध्यम से
+          सकारात्मक योगदान देना।
+        </p>
+
+      </div>
+
+
+      <div class="ha-mission-grid">
+
+
+        <div class="ha-mission-card ha-reveal">
+
+          <div class="ha-mission-icon">
+            📚
+          </div>
+
+          <h3>
+            ज्ञान एवं जागरूकता
+          </h3>
+
+          <p>
+            समाज के इतिहास, संस्कृति, परंपरा और महत्वपूर्ण
+            विषयों की उपयोगी जानकारी लोगों तक पहुँचाना।
+          </p>
+
+        </div>
+
+
+        <div class="ha-mission-card ha-reveal">
+
+          <div class="ha-mission-icon">
+            🌿
+          </div>
+
+          <h3>
+            संस्कृति संरक्षण
+          </h3>
+
+          <p>
+            हल्बा-हल्बी तथा आदिवासी सांस्कृतिक विरासत,
+            परंपरा और पहचान के प्रति जागरूकता बढ़ाना।
+          </p>
+
+        </div>
+
+
+        <div class="ha-mission-card ha-reveal">
+
+          <div class="ha-mission-icon">
+            🤝
+          </div>
+
+          <h3>
+            सामाजिक विकास
+          </h3>
+
+          <p>
+            समाज में शिक्षा, संगठन, जागरूकता और सकारात्मक
+            सामाजिक परिवर्तन के लिए योगदान देना।
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       ACHIEVEMENTS
+  ========================================================= -->
+
+  <section class="ha-section">
+
+    <div class="ha-container">
+
+
+      <div class="ha-section-title ha-reveal">
+
+        <span class="ha-kicker">
+          CONTRIBUTION
+        </span>
+
+        <h2>
+          उपलब्धियाँ एवं योगदान
+        </h2>
+
+        <div class="ha-heading-decoration">
+          <span>◆</span>
+        </div>
+
+        <p>
+          समाज, संस्कृति और लेखन के क्षेत्र में किए जा रहे
+          प्रमुख कार्य।
+        </p>
+
+      </div>
+
+
+      <div class="ha-achievement-grid">
+
+
+        <div class="ha-achievement ha-reveal">
+
+          <div class="ha-achievement-icon">
+            📖
+          </div>
+
+          <h3>
+            पुस्तक लेखन
+          </h3>
+
+          <p>
+            हल्बा-हल्बी समाज एवं सामाजिक विषयों पर
+            पुस्तक लेखन का कार्य।
+          </p>
+
+        </div>
+
+
+        <div class="ha-achievement ha-reveal">
+
+          <div class="ha-achievement-icon">
+            ✍️
+          </div>
+
+          <h3>
+            लेखन एवं संपादन
+          </h3>
+
+          <p>
+            सामाजिक, सांस्कृतिक और ऐतिहासिक विषयों
+            पर लेखन एवं सामग्री निर्माण।
+          </p>
+
+        </div>
+
+
+        <div class="ha-achievement ha-reveal">
+
+          <div class="ha-achievement-icon">
+            🌿
+          </div>
+
+          <h3>
+            संस्कृति संरक्षण
+          </h3>
+
+          <p>
+            हल्बा-हल्बी समाज की परंपरा, संस्कृति और
+            सामाजिक पहचान से जुड़े विषयों पर कार्य।
+          </p>
+
+        </div>
+
+
+        <div class="ha-achievement ha-reveal">
+
+          <div class="ha-achievement-icon">
+            💡
+          </div>
+
+          <h3>
+            डिजिटल जागरूकता
+          </h3>
+
+          <p>
+            डिजिटल माध्यमों के द्वारा समाज से संबंधित
+            जानकारी को लोगों तक पहुँचाने का प्रयास।
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       SOCIAL JOURNEY
+  ========================================================= -->
+
+  <section
+    class="ha-section"
+    style="background:#fff4df;">
+
+    <div class="ha-container">
+
+
+      <div class="ha-section-title ha-reveal">
+
+        <span class="ha-kicker">
+          JOURNEY
+        </span>
+
+        <h2>
+          सामाजिक यात्रा
+        </h2>
+
+        <div class="ha-heading-decoration">
+          <span>◆</span>
+        </div>
+
+      </div>
+
+
+      <div class="ha-timeline">
+
+
+        <div class="ha-timeline-item ha-reveal">
+
+          <div class="ha-timeline-dot"></div>
+
+          <div class="ha-timeline-content">
+
+            <h3>
+              🌱 बचपन से सामाजिक रुचि
+            </h3>
+
+            <p>
+              बचपन से ही समाज और सामाजिक गतिविधियों
+              को समझने में रुचि विकसित हुई।
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="ha-timeline-item ha-reveal">
+
+          <div class="ha-timeline-dot"></div>
+
+          <div class="ha-timeline-content">
+
+            <h3>
+              🤝 सामाजिक बैठकों में सहभागिता
+            </h3>
+
+            <p>
+              विद्यार्थी जीवन से सामाजिक बैठकों और
+              गतिविधियों में भागीदारी का अनुभव प्राप्त हुआ।
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="ha-timeline-item ha-reveal">
+
+          <div class="ha-timeline-dot"></div>
+
+          <div class="ha-timeline-content">
+
+            <h3>
+              📚 अध्ययन एवं लेखन
+            </h3>
+
+            <p>
+              समाज, इतिहास, परंपरा और संस्कृति से संबंधित
+              विषयों पर अध्ययन एवं लेखन की दिशा में कार्य।
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="ha-timeline-item ha-reveal">
+
+          <div class="ha-timeline-dot"></div>
+
+          <div class="ha-timeline-content">
+
+            <h3>
+              💻 डिजिटल माध्यम
+            </h3>
+
+            <p>
+              ब्लॉग और डिजिटल माध्यमों के माध्यम से समाज
+              से संबंधित उपयोगी सामग्री को लोगों तक पहुँचाने
+              का प्रयास।
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       PHOTO GALLERY
+  ========================================================= -->
+
+  <section class="ha-section">
+
+    <div class="ha-container">
+
+
+      <div class="ha-section-title ha-reveal">
+
+        <span class="ha-kicker">
+          PHOTO GALLERY
+        </span>
+
+        <h2>
+          मेरी सामाजिक यात्रा की झलकियाँ
+        </h2>
+
+        <div class="ha-heading-decoration">
+          <span>📷</span>
+        </div>
+
+      </div>
+
+
+      <div class="ha-gallery">
+
+
+        <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so1.jpg"
+            alt="सामाजिक कार्यक्रम"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            सामाजिक कार्यक्रम
+          </div>
+
+        </div>
+
+
+        <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so2.jpg"
+            alt="सामाजिक गतिविधि"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            सामाजिक गतिविधि
+          </div>
+
+        </div>
+
+
+        <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so3.jpg"
+            alt="समाज कार्यक्रम"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            समाज कार्यक्रम
+          </div>
+
+        </div>
+
+
+        <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so4.jpg"
+            alt="सम्मान समारोह"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            सम्मान समारोह
+          </div>
+
+        </div>
+
+
+        <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so5.jpg"
+            alt="लेखन एवं सामाजिक कार्य"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            लेखन एवं सामाजिक कार्य
+          </div>
+
+        </div>
+
+
+        <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so6.jpg"
+            alt="सामाजिक यात्रा"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            सामाजिक यात्रा
+          </div>
+
+        </div>
+
+		  <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so7.jpg"
+            alt="सामाजिक यात्रा"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            सामाजिक यात्रा
+          </div>
+
+        </div>
+
+		  <div class="ha-gallery-item ha-reveal">
+
+          <img
+            src="./so8.jpg"
+            alt="सामाजिक यात्रा"
+            loading="lazy">
+
+          <div class="ha-gallery-overlay">
+            सामाजिक यात्रा
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       BOOKS
+  ========================================================= -->
+
+  <section
+    class="ha-section"
+    style="background:#fff4df;">
+
+    <div class="ha-container">
+
+
+      <div class="ha-section-title ha-reveal">
+
+        <span class="ha-kicker">
+          BOOKS & PUBLICATIONS
+        </span>
+
+        <h2>
+          मेरी पुस्तकें एवं प्रमुख लेख
+        </h2>
+
+        <div class="ha-heading-decoration">
+          <span>📖</span>
+        </div>
+
+        <p>
+          समाज, संस्कृति और इतिहास से जुड़े लेखन एवं प्रकाशनों का
+          संग्रह।
+        </p>
+
+      </div>
+
+
+      <div class="ha-books-wrapper">
+
+        <div
+          class="ha-books"
+          id="haBooks">
+
+
+          <!-- REAL BOOK -->
+
+          <article class="ha-book ha-reveal">
+
+            <img
+              class="ha-book-cover"
+              src="./book2.jpg"
+              alt="हल्बी पहाड़ा"
+              loading="lazy">
+
+            <h3>
+              भाग 1
+            </h3>
+
+            <p>
+              लेखक — आर्यन चिराम
+            </p>
+
+            <a
+              href="https://www.flipkart.com/halbi-pahada/p/itmfchtfnctm2gvg"
+              class="ha-book-btn"
+              target="_blank"
+              rel="noopener">
+
+              विस्तार से पढ़ें
+
+            </a>
+
+          </article>
+
+
+          <!-- ARTICLE CARD -->
+
+          <article class="ha-book ha-reveal">
+
+            <img
+              class="ha-book-cover"
+              src="./book3.jpg"
+              alt="सामाजिक लेख"
+              loading="lazy">
+
+            <h3>
+              युवा क्रांति
+            </h3>
+
+            <p>
+              युवाओ को समाज में जोड़ने का एक पहल
+            </p>
+
+            <a
+              href="https://www.amazon.in/-/hi/aaryan-Chiram-ebook/dp/B08291KTK4"
+              class="ha-book-btn"
+              target="_blank"
+              rel="noopener">
+
+              लेख पढ़ें
+
+            </a>
+
+          </article>
+
+
+          <article class="ha-book ha-reveal">
+
+            <img
+              class="ha-book-cover"
+              src="./book4.jpg"
+              alt="आदिवासी संस्कृति लेख"
+              loading="lazy">
+
+            <h3>
+              हल्बा क्रांति
+            </h3>
+
+            <p>
+              सांस्कृतिक विषय पर लेख
+            </p>
+
+            <a
+              href="https://www.amazon.in/-/hi/aaryan-Chiram-ebook/dp/B082FG7H8M"
+              class="ha-book-btn"
+              target="_blank"
+              rel="noopener">
+
+              लेख पढ़ें
+
+            </a>
+
+          </article>
+
+
+          <article class="ha-book ha-reveal">
+
+            <img
+              class="ha-book-cover"
+              src="./book5.png"
+              alt="इतिहास एवं समाज"
+              loading="lazy">
+
+            <h3>
+              पुरखा पाट
+            </h3>
+
+            <p>
+              आदिवासी अध्ययन एवं लेख
+            </p>
+
+            <a
+              href="https://www.amazon.in/-/hi/AARYAN-CHIRAM-ebook/dp/B0GSKYSTVV/ref=sr_1_1?crid=1U99H0Z2QZT00&dib=eyJ2IjoiMSJ9.hUyQVV6S5aHkwAFRDLpwHQ.E4p4xJTYERmispjgpdCtymZbv4FGzG27L5TL0H1XwjI&dib_tag=se&keywords=%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%96%E0%A4%BE+%E0%A4%AA%E0%A4%BE%E0%A4%9F&qid=1787773492&s=digital-text&sprefix=%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A4%96%E0%A4%BE+%E0%A4%AA%E0%A4%BE%E0%A4%9F%2Cdigital-text%2C234&sr=1-1"
+              class="ha-book-btn"
+              target="_blank"
+              rel="noopener">
+
+              लेख पढ़ें
+
+            </a>
+
+          </article>
+
+<article class="ha-book ha-reveal">
+
+            <img
+              class="ha-book-cover"
+              src="./book6.png"
+              alt="इतिहास एवं समाज"
+              loading="lazy">
+
+            <h3>
+              पुरखा पाट 2
+            </h3>
+
+            <p>
+              आदिवासी अध्ययन एवं लेख
+            </p>
+
+            <a
+              href="https://www.google.co.in/books/edition/%E0%A4%AA_%E0%A4%B0%E0%A4%96_%E0%A4%AA_%E0%A4%9F_purkha_pat_/RlDsEQAAQBAJ?hl=en&sa=X&ved=2ahUKEwiGloK8iL-WAxVDd2wGHTyWHyMQiqUDegQIBBAI"
+              class="ha-book-btn"
+              target="_blank"
+              rel="noopener">
+
+              लेख पढ़ें
+
+            </a>
+
+          </article>
+
+			
+        </div>
+
+
+        <div class="ha-slider-buttons">
+
+          <button
+            class="ha-slider-btn"
+            id="haBookPrev"
+            type="button">
+
+            ‹
+
+          </button>
+
+          <button
+            class="ha-slider-btn"
+            id="haBookNext"
+            type="button">
+
+            ›
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       ARTICLES
+  ========================================================= -->
+
+
+
+  <!-- ========================================================
+       CONTACT
+  ========================================================= -->
+
+  <section
+    class="ha-section ha-contact"
+    id="contact">
+
+    <div class="ha-container">
+
+      <div class="ha-contact-box ha-reveal">
+
+        <h2>
+          संपर्क करें
+        </h2>
+
+        <p>
+          सामाजिक विषयों, लेखन, सुझाव अथवा अन्य महत्वपूर्ण
+          विषयों पर संपर्क करने के लिए नीचे दिए गए माध्यमों
+          का उपयोग करें।
+        </p>
+
+
+        <div class="ha-contact-buttons">
+
+          <a
+            class="ha-contact-button"
+            href="mailto:aaryanchiram@gmail.com">
+
+            ✉ ई-मेल करें
+
+          </a>
+<a
+            class="ha-contact-button"
+            href="mailto:tumeshchiram@gmail.com">
+
+            📧 ई-मेल करें
+
+          </a>
+
+          <a
+            class="ha-contact-button secondary"
+            href="tel:7999054095">
+
+            ☎ संपर्क करें
+
+          </a>
+
+			<a
+            class="ha-contact-button secondary"
+            href="https://halba-halbi-samaj.blogspot.com">
+
+            🌏 visite
+
+          </a>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+
+        <div class="ha-social">
+
+          <a
+            href="https://www.facebook.com/aaryan.chiram.7/"
+            target="_blank"
+            rel="noopener">
+
+          ⓕ Facebook
+
+          </a>
+
+          <a
+            href="https://www.youtube.com/c/appsandtechnicalsupport"
+            target="_blank"
+            rel="noopener">
+
+            ▶ YouTube
+
+          </a>
+
+          <a
+            href="https://www.instagram.com/aaryan.chiram"
+            target="_blank"
+            rel="noopener">
+
+             ⓘ Instagram
+
+          </a>
+			
+			 <a
+            href="https://wa.me/917999054095"
+            target="_blank"
+            rel="noopener">
+
+            ⓦ whatsapp
+
+          </a>
+
+			<a
+            href="https://twitter.com/aaryan_chiram"
+            target="_blank"
+            rel="noopener">
+
+            🕊️ twitter
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer class="ha-footer">
+
+    <div class="ha-footer-name">
+      आर्यन चिराम
+    </div>
+
+    <p>
+      लेखक • कवि • संपादक • प्रकाशक • सामाजिक कार्यकर्ता
+    </p>
+
+    <p>
+      समाज • संस्कृति • इतिहास • जागरूकता
+    </p>
+
+    <p style="color:#ffd27b;margin-top:12px;">
+      जय हल्बा • जय माँ दंतेश्वरी
+    </p>
+
+  </footer>
+
+
+  <!-- BOTTOM TRIBAL BORDER -->
+
+  <div class="ha-pattern"></div>
+
+
+  <!-- ========================================================
+       LIGHTBOX
+  ========================================================= -->
+
+  <div
+    class="ha-lightbox"
+    id="haLightbox">
+
+    <button
+      class="ha-lightbox-close"
+      id="haLightboxClose"
+      type="button">
+
+      ×
+
+    </button>
+
+    <img
+      id="haLightboxImage"
+      src=""
+      alt="Gallery">
+
+  </div>
+
+
+  <!-- BACK TO TOP -->
+
+  <button
+    class="ha-top"
+    id="haTop"
+    type="button"
+    aria-label="ऊपर जाएँ">
+
+    ↑
+
+  </button>
+
+</div>
+
+
+
+<script>
+
+/* ============================================================
+   AARYAN CHIRAM ABOUT PAGE JAVASCRIPT
+============================================================ */
+
+(function(){
+
+  "use strict";
+
+
+  /* ==========================================================
+     SCROLL REVEAL
+  ========================================================== */
+
+  const revealItems =
+    document.querySelectorAll(
+      "#halba-about .ha-reveal"
+    );
+
+
+  if(
+    "IntersectionObserver"
+    in window
+  ){
+
+    const observer =
+      new IntersectionObserver(
+
+        function(entries){
+
+          entries.forEach(
+            function(entry){
+
+              if(
+                entry.isIntersecting
+              ){
+
+                entry.target
+                  .classList
+                  .add("visible");
+
+                observer.unobserve(
+                  entry.target
+                );
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold:.12
+        }
+
+      );
+
+
+    revealItems.forEach(
+      function(item){
+
+        observer.observe(item);
+
+      }
+    );
+
+  }
+
+  else{
+
+    revealItems.forEach(
+      function(item){
+
+        item.classList.add(
+          "visible"
+        );
+
+      }
+    );
+
+  }
+
+
+
+  /* ==========================================================
+     BACK TO TOP
+  ========================================================== */
+
+  const topButton =
+    document.getElementById(
+      "haTop"
+    );
+
+
+  window.addEventListener(
+    "scroll",
+
+    function(){
+
+      if(
+        window.scrollY > 500
+      ){
+
+        topButton.classList.add(
+          "show"
+        );
+
+      }
+
+      else{
+
+        topButton.classList.remove(
+          "show"
+        );
+
+      }
+
+    },
+
+    {
+      passive:true
+    }
+
+  );
+
+
+  topButton.addEventListener(
+    "click",
+
+    function(){
+
+      window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+      });
+
+    }
+
+  );
+
+
+
+  /* ==========================================================
+     SMOOTH INTERNAL LINKS
+  ========================================================== */
+
+  document
+    .querySelectorAll(
+      '#halba-about a[href^="#"]'
+    )
+    .forEach(
+
+      function(link){
+
+        link.addEventListener(
+          "click",
+
+          function(event){
+
+            const id =
+              this.getAttribute(
+                "href"
+              );
+
+            const target =
+              document.querySelector(
+                id
+              );
+
+
+            if(target){
+
+              event.preventDefault();
+
+              target.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"start"
+
+              });
+
+            }
+
+          }
+
+        );
+
+      }
+
+    );
+
+
+
+  /* ==========================================================
+     PHOTO GALLERY LIGHTBOX
+  ========================================================== */
+
+  const galleryItems =
+    document.querySelectorAll(
+      "#halba-about .ha-gallery-item"
+    );
+
+  const lightbox =
+    document.getElementById(
+      "haLightbox"
+    );
+
+  const lightboxImage =
+    document.getElementById(
+      "haLightboxImage"
+    );
+
+  const lightboxClose =
+    document.getElementById(
+      "haLightboxClose"
+    );
+
+
+  galleryItems.forEach(
+
+    function(item){
+
+      item.addEventListener(
+        "click",
+
+        function(){
+
+          const image =
+            item.querySelector(
+              "img"
+            );
+
+          if(image){
+
+            lightboxImage.src =
+              image.src;
+
+            lightboxImage.alt =
+              image.alt;
+
+            lightbox.classList.add(
+              "active"
+            );
+
+            document.body.style
+              .overflow = "hidden";
+
+          }
+
+        }
+
+      );
+
+    }
+
+  );
+
+
+  function closeLightbox(){
+
+    lightbox.classList.remove(
+      "active"
+    );
+
+    document.body.style
+      .overflow = "";
+
+  }
+
+
+  lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+  );
+
+
+  lightbox.addEventListener(
+    "click",
+
+    function(event){
+
+      if(
+        event.target === lightbox
+      ){
+
+        closeLightbox();
+
+      }
+
+    }
+
+  );
+
+
+  document.addEventListener(
+    "keydown",
+
+    function(event){
+
+      if(
+        event.key === "Escape"
+      ){
+
+        closeLightbox();
+
+      }
+
+    }
+
+  );
+
+
+
+  /* ==========================================================
+     BOOK SLIDER
+  ========================================================== */
+
+  const books =
+    document.getElementById(
+      "haBooks"
+    );
+
+  const prev =
+    document.getElementById(
+      "haBookPrev"
+    );
+
+  const next =
+    document.getElementById(
+      "haBookNext"
+    );
+
+
+  if(
+    books &&
+    prev &&
+    next
+  ){
+
+    next.addEventListener(
+      "click",
+
+      function(){
+
+        books.scrollBy({
+
+          left:230,
+
+          behavior:"smooth"
+
+        });
+
+      }
+
+    );
+
+
+    prev.addEventListener(
+      "click",
+
+      function(){
+
+        books.scrollBy({
+
+          left:-230,
+
+          behavior:"smooth"
+
+        });
+
+      }
+
+    );
+
+  }
+
+
+
+  /* ==========================================================
+     ESCAPE SCROLL LOCK
+  ========================================================== */
+
+  document.addEventListener(
+    "keydown",
+
+    function(event){
+
+      if(
+        event.key === "Escape"
+      ){
+
+        document.body.style
+          .overflow = "";
+
+      }
+
+    }
+
+  );
+
+
+})();
+
+/* ==========================================================
+   CATEGORY TABS
+========================================================== */
+
+(function(){
+
+  const tabs =
+    document.querySelectorAll(
+      "#halba-about .ha-category-tab"
+    );
+
+  const contents =
+    document.querySelectorAll(
+      "#halba-about .ha-tab-content"
+    );
+
+
+  tabs.forEach(function(tab){
+
+    tab.addEventListener(
+      "click",
+      function(){
+
+        const target =
+          this.getAttribute(
+            "data-tab"
+          );
+
+
+        /* सभी tabs बंद */
+
+        tabs.forEach(function(item){
+
+          item.classList.remove(
+            "active"
+          );
+
+          item.setAttribute(
+            "aria-selected",
+            "false"
+          );
+
+        });
+
+
+        /* सभी content बंद */
+
+        contents.forEach(function(content){
+
+          content.classList.remove(
+            "active"
+          );
+
+        });
+
+
+        /* selected tab */
+
+        this.classList.add(
+          "active"
+        );
+
+        this.setAttribute(
+          "aria-selected",
+          "true"
+        );
+
+
+        /* selected content */
+
+        const selectedContent =
+          document.getElementById(
+            target
+          );
+
+
+        if(selectedContent){
+
+          selectedContent.classList.add(
+            "active"
+          );
+
+        }
+
+      }
+    );
+
+  });
+
+})();
+
+	// Category filter functionality
+    const tabs = document.querySelectorAll('.tab-btn');
+    const cards = document.querySelectorAll('.link-card');
+    const emptyMsg = document.getElementById('emptyMsg');
+    const grid = document.getElementById('linksGrid');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Active state
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const cat = tab.dataset.cat;
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          if (cat === 'all' || card.dataset.cat === cat) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Empty message
+        if (visibleCount === 0) {
+          emptyMsg.style.display = 'block';
+          grid.style.display = 'none';
+        } else {
+          emptyMsg.style.display = 'none';
+          grid.style.display = 'grid';
+        }
+      });
+    });
+</script>
