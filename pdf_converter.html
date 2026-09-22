@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Converter - Text & File to PDF</title>
+  <!-- Tailwind CSS CDN for modern UI -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+      min-height: 100vh;
+    }
+    .drop-zone {
+      border: 2px dashed #94a3b8;
+      transition: all 0.2s ease-in-out;
+    }
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: #2563eb;
+      background-color: #eff6ff;
+    }
+  </style>
+</head>
+<body class="text-slate-800 p-4 md:p-8">
+
+  <div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <header class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-red-100 text-red-600 rounded-2xl mb-3 shadow-sm">
+        <i class="fa-solid fa-file-pdf text-3xl"></i>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900">PDF Converter Web App</h1>
+      <p class="text-slate-600 mt-2 text-base">किसी भी टेक्स्ट, टेक्स्ट फाइल (.txt) या इमेज (JPG, PNG) को आसानी से PDF में बदलें।</p>
+    </header>
+
+    <!-- Main Card -->
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+      <!-- Tabs -->
+      <div class="flex border-b border-slate-200 bg-slate-50/50 p-2 gap-2">
+        <button id="tab-text-btn" onclick="switchTab('text')" class="flex-1 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition bg-white text-blue-600 shadow-sm border border-slate-200">
+          <i class="fa-solid fa-align-left"></i> डायरेक्ट टेक्स्ट (Text to PDF)
+        </button>
+        <button id="tab-file-btn" onclick="switchTab('file')" class="flex-1 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition text-slate-600 hover:text-slate-900">
+          <i class="fa-solid fa-cloud-arrow-up"></i> फाइल अपलोड (File to PDF)
+        </button>
+      </div>
+
+      <!-- Tab 1: Text to PDF -->
+      <div id="tab-text" class="p-6 md:p-8">
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">दस्तावेज़ का शीर्षक (Document Title)</label>
+            <input type="text" id="pdf-title" placeholder="उदा. My Important Notes" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-slate-800">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">अपना टेक्स्ट यहाँ लिखें या पेस्ट करें (Content)</label>
+            <textarea id="pdf-content" rows="9" placeholder="यहाँ अपना मैटर टाइप करें..." class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none text-slate-800 leading-relaxed"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: File to PDF -->
+      <div id="tab-file" class="p-6 md:p-8 hidden">
+        <div class="space-y-4">
+          <div class="drop-zone p-8 rounded-2xl text-center cursor-pointer bg-slate-50" id="drop-area" onclick="document.getElementById('file-input').click()">
+            <input type="file" id="file-input" class="hidden" accept=".txt, image/png, image/jpeg, image/webp" onchange="handleFileSelect(event)">
+            <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+              <i class="fa-solid fa-file-import text-2xl"></i>
+            </div>
+            <h3 class="text-base font-semibold text-slate-800">यहाँ फाइल क्लिक करके चुनें या ड्रैग करें</h3>
+            <p class="text-xs text-slate-500 mt-1">सपोर्टेड फाइल्स: .TXT, JPG, PNG, WEBP</p>
+          </div>
+
+          <!-- File Preview Info -->
+          <div id="file-preview-card" class="hidden border border-slate-200 rounded-xl p-4 bg-slate-50 flex items-center justify-between">
+            <div class="flex items-center gap-3 overflow-hidden">
+              <i class="fa-solid fa-file text-blue-500 text-xl"></i>
+              <div class="truncate">
+                <p id="file-name" class="text-sm font-semibold text-slate-800 truncate"></p>
+                <p id="file-size" class="text-xs text-slate-500"></p>
+              </div>
+            </div>
+            <button onclick="removeSelectedFile()" class="text-slate-400 hover:text-red-500 p-2">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Global Settings & Action Area -->
+      <div class="p-6 md:p-8 bg-slate-50 border-t border-slate-200">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">पेज साइज़ (Page Size)</label>
+            <select id="pdf-pagesize" class="w-full px-3 py-2 bg-white rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option value="a4" selected>A4 (Standard)</option>
+              <option value="letter">Letter</option>
+              <option value="legal">Legal</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">पेज ओरिएंटेशन (Orientation)</label>
+            <select id="pdf-orientation" class="w-full px-3 py-2 bg-white rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+              <option value="portrait" selected>Portrait (सीधा)</option>
+              <option value="landscape">Landscape (आड़ा)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-600 mb-1">आउटपुट फाइल का नाम</label>
+            <input type="text" id="pdf-filename" value="document.pdf" class="w-full px-3 py-2 bg-white rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Download Button -->
+        <button onclick="generatePDF()" class="w-full py-3.5 px-6 rounded-xl font-bold text-white bg-blue-600 hover:bg-blue-700 active:scale-[0.99] transition shadow-lg shadow-blue-500/25 flex items-center justify-center gap-3">
+          <i class="fa-solid fa-file-arrow-down text-lg"></i>
+          <span>PDF तैयार करें और डाउनलोड करें</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Features Footer -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 text-center">
+      <div class="bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-slate-200/60">
+        <i class="fa-solid fa-lock text-green-600 mb-1"></i>
+        <h4 class="text-sm font-semibold text-slate-800">100% सुरक्षित और प्राइवेट</h4>
+        <p class="text-xs text-slate-500">सभी प्रोसेस आपके ब्राउज़र में होती है, कोई डेटा सर्वर पर नहीं जाता।</p>
+      </div>
+      <div class="bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-slate-200/60">
+        <i class="fa-solid fa-bolt text-amber-500 mb-1"></i>
+        <h4 class="text-sm font-semibold text-slate-800">सुपर फ़ास्ट</h4>
+        <p class="text-xs text-slate-500">एक क्लिक में बिना किसी इंतज़ार के तुरंत PDF डाउनलोड।</p>
+      </div>
+      <div class="bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-slate-200/60">
+        <i class="fa-solid fa-mobile-screen-button text-blue-500 mb-1"></i>
+        <h4 class="text-sm font-semibold text-slate-800">मोबाइल और PC दोनों पर</h4>
+        <p class="text-xs text-slate-500">हर डिवाइस और ब्राउज़र पर बिना रुकावट काम करता है।</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentTab = 'text';
+    let uploadedFile = null;
+    let uploadedFileData = null;
+
+    function switchTab(tab) {
+      currentTab = tab;
+      const textBtn = document.getElementById('tab-text-btn');
+      const fileBtn = document.getElementById('tab-file-btn');
+      const textSec = document.getElementById('tab-text');
+      const fileSec = document.getElementById('tab-file');
+
+      if (tab === 'text') {
+        textBtn.className = "flex-1 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition bg-white text-blue-600 shadow-sm border border-slate-200";
+        fileBtn.className = "flex-1 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition text-slate-600 hover:text-slate-900";
+        textSec.classList.remove('hidden');
+        fileSec.classList.add('hidden');
+      } else {
+        fileBtn.className = "flex-1 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition bg-white text-blue-600 shadow-sm border border-slate-200";
+        textBtn.className = "flex-1 py-3 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition text-slate-600 hover:text-slate-900";
+        fileSec.classList.remove('hidden');
+        textSec.classList.add('hidden');
+      }
+    }
+
+    function handleFileSelect(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      processFile(file);
+    }
+
+    function processFile(file) {
+      uploadedFile = file;
+      document.getElementById('file-name').innerText = file.name;
+      document.getElementById('file-size').innerText = (file.size / 1024).toFixed(1) + ' KB';
+      document.getElementById('file-preview-card').classList.remove('hidden');
+
+      const reader = new FileReader();
+      if (file.type.startsWith('image/')) {
+        reader.readAsDataURL(file);
+        reader.onload = (e) => { uploadedFileData = { type: 'image', data: e.target.result }; };
+      } else {
+        reader.readAsText(file);
+        reader.onload = (e) => { uploadedFileData = { type: 'text', data: e.target.result }; };
+      }
+    }
+
+    function removeSelectedFile() {
+      uploadedFile = null;
+      uploadedFileData = null;
+      document.getElementById('file-input').value = '';
+      document.getElementById('file-preview-card').classList.add('hidden');
+    }
+
+    // Drag and Drop
+    const dropArea = document.getElementById('drop-area');
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.add('dragover');
+      });
+    });
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.remove('dragover');
+      });
+    });
+    dropArea.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      const file = dt.files[0];
+      if (file) processFile(file);
+    });
+
+    async function generatePDF() {
+      const { jsPDF } = window.jspdf;
+      const orientation = document.getElementById('pdf-orientation').value;
+      const pageSize = document.getElementById('pdf-pagesize').value;
+      let filename = document.getElementById('pdf-filename').value.trim();
+      if (!filename.endsWith('.pdf')) filename += '.pdf';
+
+      const doc = new jsPDF({
+        orientation: orientation,
+        unit: 'mm',
+        format: pageSize
+      });
+
+      if (currentTab === 'text') {
+        const title = document.getElementById('pdf-title').value.trim();
+        const content = document.getElementById('pdf-content').value.trim();
+
+        if (!title && !content) {
+          alert('कृपया कुछ टेक्स्ट या शीर्षक दर्ज करें!');
+          return;
+        }
+
+        let startY = 20;
+        if (title) {
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(18);
+          doc.text(title, 20, startY);
+          startY += 10;
+        }
+
+        if (content) {
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(11);
+          const splitContent = doc.splitTextToSize(content, 170);
+          doc.text(splitContent, 20, startY);
+        }
+
+        doc.save(filename);
+      } else {
+        if (!uploadedFileData) {
+          alert('कृपया पहले कोई फाइल अपलोड करें!');
+          return;
+        }
+
+        if (uploadedFileData.type === 'text') {
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(11);
+          const splitContent = doc.splitTextToSize(uploadedFileData.data, 170);
+          doc.text(splitContent, 20, 20);
+          doc.save(filename);
+        } else if (uploadedFileData.type === 'image') {
+          const img = new Image();
+          img.src = uploadedFileData.data;
+          img.onload = function() {
+            const pageWidth = doc.internal.pageSize.getWidth();
+            const pageHeight = doc.internal.pageSize.getHeight();
+            const margin = 15;
+            const maxW = pageWidth - (margin * 2);
+            const maxH = pageHeight - (margin * 2);
+
+            let imgW = img.width;
+            let imgH = img.height;
+            const ratio = Math.min(maxW / imgW, maxH / imgH);
+            imgW = imgW * ratio;
+            imgH = imgH * ratio;
+
+            const x = (pageWidth - imgW) / 2;
+            const y = (pageHeight - imgH) / 2;
+
+            doc.addImage(uploadedFileData.data, 'JPEG', x, y, imgW, imgH);
+            doc.save(filename);
+          };
+        }
+      }
+    }
+  </script>
+</body>
+</html>
